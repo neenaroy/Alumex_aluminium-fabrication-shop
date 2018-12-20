@@ -89,47 +89,71 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">Read</span>
-							<h2 class="colorlib-heading">Signin</h2>
+							<h2 class="colorlib-heading">Register Here..</h2>
 						</div>
 					</div>
-						<div class="col-md-7 col-md-push-1">
+						<div class="col-md-9 col-md-push-1">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
                                      <form id="form1" runat="server">
                                         <div class="form-group">
-                                            <asp:TextBox ID="txtmobile" runat="server" CausesValidation="True" class="form-control" placeholder="Phone Number"></asp:TextBox>
-                                        </div>
-										<div class="form-group">
-                                         <asp:TextBox ID="txtpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Password"></asp:TextBox>
-										</div>
-										<div class="form-group">
-                                         <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-primary btn-send-message" OnClick="Button1_Click"  />
-										</div>
-                                     </form>
-                                    </div>								
-							</div>
+                                             <asp:TextBox ID="txtfname" runat="server" CausesValidation="True" class="form-control" placeholder="First Name"></asp:TextBox>
+                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtfname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                             <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="txtfname" ErrorMessage="Enter a valid name" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
+                                            </div>
+                                         <div class="form-group">
+                                             <asp:TextBox ID="txtlname" runat="server" CausesValidation="True" class="form-control" placeholder="Last Name" ></asp:TextBox>
+                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtlname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtlname" ErrorMessage="Enter a valid name" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
+                                         </div>
+                                     <div class="form-group">
+                                             <asp:TextBox ID="txthousename" runat="server" CausesValidation="True" class="form-control" placeholder="Address Line" ></asp:TextBox>
+                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txthousename" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txthousename" ErrorMessage="Enter a valid address" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
+                                     </div>
+                                     <div class="form-group">
+                                             <asp:TextBox ID="txtemail" runat="server" CausesValidation="True" class="form-control" placeholder="Email"></asp:TextBox>
+                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtemail" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                             <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtemail" ErrorMessage="Enter a valid Email" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                     </div>
+                                </div>
+                            </div>
 						</div>
-					</div>
-				</div>
-			</div>
-			<div id="map"></div>	
-			<div id="get-in-touch" class="colorlib-bg-color">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<h2>Get in Touch!</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<p class="colorlib-lead">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							<p><a href="#" class="btn btn-primary btn-learn">Contact me!</a></p>
-						</div>	
-					</div>
+                    <div class="col-md-9 col-md-push-1">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
+                                     <div class="form-group">
+                                            <asp:TextBox ID="txtmobile" runat="server" CausesValidation="True" class="form-control" placeholder="Mobile Number"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtmobile" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtmobile" ErrorMessage="Enter a valid number" ForeColor="Red" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>
+                                    </div>
+                                    <div class="form-group">
+                                            <asp:TextBox ID="txtloc" runat="server" CausesValidation="True" class="form-control" placeholder="Location"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtloc" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtloc" ErrorMessage="Enter a valid name" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
+                                    </div>
+                                    <div class="form-group">
+                                             <asp:TextBox ID="txtpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Password"></asp:TextBox>
+					                         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtpswd" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                             <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="txtpswd" ErrorMessage="Enter a valid name" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
+                                     </div>
+                                    <div class="form-group">
+                                         <asp:TextBox ID="txtrpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Confirm Password"></asp:TextBox>
+					                     <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtrpswd" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                         <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="txtrpswd" ErrorMessage="Enter a valid name" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
+                                    </div>
+					                <div class="form-group">
+                                     <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-primary btn-send-message"   />
+					                </div>
+                                </form>
+                            </div>								
+				        </div>
+			      </div>
+              </div>								
 				</div>
 			</div>
 		</div>
-
+			
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
