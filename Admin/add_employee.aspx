@@ -8,7 +8,7 @@
    <!DOCTYPE html>
 <html lang="en">
 
-<head runat="server">
+<head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=Purple Admin</title>
@@ -24,10 +24,7 @@
         <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Add Your Employees<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT * FROM [employee_table]"></asp:SqlDataSource>
-                      <asp:ScriptManager ID="ScriptManager1" runat="server">
-                      </asp:ScriptManager>
-                    </h4>
+                  <h4 class="card-title">Add Your Employees</h4>
                   <form class="forms-sample">
                     <div class="form-group">
                         <asp:TextBox ID="txtfname" runat="server" CausesValidation="True" class="form-control" placeholder="First Name"></asp:TextBox>
