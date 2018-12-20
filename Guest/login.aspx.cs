@@ -24,7 +24,7 @@ public partial class Guest_login : System.Web.UI.Page
         SqlCommand cmd1 = new SqlCommand("splogin", obj.con);
         cmd1.CommandType = CommandType.StoredProcedure;
         cmd1.Parameters.Add("@flag", 1);
-        cmd1.Parameters.Add("@username", txtmobile.Text);
+        cmd1.Parameters.Add("@mobile", txtmobile.Text);
         cmd1.Parameters.Add("@password", txtpswd.Text);
         DataTable dt1 = new DataTable();
         SqlDataAdapter adt1 = new SqlDataAdapter(cmd1);

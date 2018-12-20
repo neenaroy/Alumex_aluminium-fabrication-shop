@@ -23,7 +23,7 @@ public partial class Guest_Register : System.Web.UI.Page
         obj.getconnect();
         SqlCommand cmd = new SqlCommand("splogin", obj.con);
         cmd.CommandType = CommandType.StoredProcedure;
-        cmd.Parameters.Add("@flag",2);
+        cmd.Parameters.Add("@flag",4);
         DataTable dt = new DataTable();
         SqlDataAdapter adt = new SqlDataAdapter(cmd);
         adt.Fill(dt);
@@ -43,7 +43,7 @@ public partial class Guest_Register : System.Web.UI.Page
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@flag", 0);
             cmd.Parameters.Add("@loginid", get_id());
-            cmd.Parameters.Add("@username", txtemail.Text);
+            cmd.Parameters.Add("@mobile", txtmobile.Text);
             cmd.Parameters.Add("@password", txtpswd.Text);
             cmd.Parameters.Add("@usertype", "user");
 
