@@ -42,16 +42,17 @@ public partial class Guest_login : System.Web.UI.Page
                 Response.Redirect("~/guest/userhome.aspx");
                 Session.RemoveAll();
             }
-
-
         }
     else
+        {
+            Response.Write("<script>alert('incorrect password')</script>");
+            clear();
+        }
+    }
+    protected void clear()
     {
-                    Response.Write("<script>alert('incorrect password')</script>");
-        
-
+        txtmobile.Text = "";
+        txtpswd.Text = "";
     }
-
-    }
-    
+       
 }

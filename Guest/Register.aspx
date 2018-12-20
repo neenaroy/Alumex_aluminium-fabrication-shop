@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="Guest_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Guest_Register" %>
 
 <!DOCTYPE html>
 
@@ -49,7 +49,8 @@
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
-	<![endif]--></head>
+	<![endif]-->
+</head>
 <body>
     <div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
@@ -94,8 +95,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 						<div class="col-md-7 col-md-push-1">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
-									<form runat="server" >
-										<div class="form-group">
+                                     <form id="form1" runat="server">
+                                        <div class="form-group">
                                             <asp:TextBox ID="txtmobile" runat="server" CausesValidation="True" class="form-control" placeholder="Phone Number"></asp:TextBox>
                                         </div>
 										<div class="form-group">
@@ -104,17 +105,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 										<div class="form-group">
                                          <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-primary btn-send-message" OnClick="Button1_Click"  />
 										</div>
-									</form>
-								</div>
-								
+                                     </form>
+                                    </div>								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
 			<div id="map"></div>	
-
 			<div id="get-in-touch" class="colorlib-bg-color">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -126,13 +124,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<p class="colorlib-lead">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 							<p><a href="#" class="btn btn-primary btn-learn">Contact me!</a></p>
-						</div>
-						
+						</div>	
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>

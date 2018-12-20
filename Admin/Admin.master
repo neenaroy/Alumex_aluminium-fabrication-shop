@@ -211,7 +211,6 @@
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-title">Employee</span>
               <i class="menu-arrow"></i>
-              <i class="mdi mdi-crosshairs-gps menu-icon"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
@@ -224,7 +223,6 @@
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-title">Stock</span>
               <i class="menu-arrow"></i>
-              <i class="mdi mdi-crosshairs-gps menu-icon"></i>
             </a>
             <div class="collapse" id="ui-basic1">
               <ul class="nav flex-column sub-menu">
@@ -234,13 +232,43 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
-              <span class="menu-title">Model</span>
-              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-title">Category</span>
+              <i class="menu-arrow"></i>
             </a>
+            <div class="collapse" id="ui-basic2">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="add_employee.aspx">Add Category</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">View</a></li>
+              </ul>
+            </div>
           </li>
-          <li class="nav-item">
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-title">Model</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic1">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="add_employee.aspx">Add Model</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">View</a></li>
+              </ul>
+            </div>
+          </li><li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-title">Stock</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic1">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="add_employee.aspx">Add Stock</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">In_stock</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Out_stock</a></li>
+              </ul>
+            </div>
+          </li>
+           <li class="nav-item">
             <a class="nav-link" href="pages/charts/chartjs.html">
               <span class="menu-title">Customer</span>
               <i class="mdi mdi-chart-bar menu-icon"></i>

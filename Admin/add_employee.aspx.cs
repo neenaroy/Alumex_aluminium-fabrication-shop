@@ -14,10 +14,7 @@ public partial class Admin_add_employee : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Page.IsPostBack)
-        {
 
-        }
     }
     protected int get_id()
     {
@@ -55,11 +52,27 @@ public partial class Admin_add_employee : System.Web.UI.Page
         cmd1.Parameters.Add("@emp_house", txthousename.Text);
         cmd1.Parameters.Add("@emp_email", txtemail.Text);
         cmd1.Parameters.Add("@emp_mobile", txtmobile.Text);
-        cmd1.Parameters.Add("@emp_location", txtloc.Text);
         cmd1.Parameters.Add("@emp_doj", txtdoj.Text);
-        cmd1.ExecuteNonQuery();
-        Response.Write("<script>alert(' Employee added succesfully')</script>");
-        clear();
+        cmd1.Parameters.Add("@emp_loc", txtloc.Text);
+
+        SqlCommand cmd2 = new SqlCommand("spemp", obj.con);
+        cmd2.CommandType = CommandType.StoredProcedure;
+        cmd2.Parameters.Add("@flag", 3);
+        cmd2.Parameters.Add("@emp_mobile", txtmobile.Text);
+        DataTable dt = new DataTable();
+        SqlDataAdapter adt = new SqlDataAdapter(cmd2);
+        adt.Fill(dt);
+        if (dt.Rows.Count > 0)
+          {
+              Response.Write("<script>alert('Employee with same phone number already exist')</script>");
+
+          }
+        else
+          {
+             cmd1.ExecuteNonQuery();
+             Response.Write("<script>alert(' Employee added succesfully')</script>");
+            clear();
+          }
     }
     protected void clear()
     {
@@ -68,7 +81,7 @@ public partial class Admin_add_employee : System.Web.UI.Page
         txthousename.Text = "";
         txtemail.Text = "";
         txtmobile.Text = "";
-        txtloc.Text = "";
         txtdoj.Text = "";
+        txtloc.Text = "";
     }
 }
