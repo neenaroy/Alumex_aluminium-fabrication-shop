@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="card">
+    <div class="col-12 grid-margin stretch-card">
+              <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Insert Shop</h4>
                   <form class="forms-sample">
@@ -31,5 +32,6 @@
                   </form>
                 </div>
               </div>
+        </div>
 </asp:Content>
 
