@@ -5,7 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-   <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,12 +19,14 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="../../css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="../../images/favicon.png" />
 </head>
         <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Add Your Employees</h4>
+                  <h4 class="card-title">
+                      <asp:ScriptManager ID="ScriptManager2" runat="server">
+                      </asp:ScriptManager>
+                      Add Your Employees</h4>
                   <form class="forms-sample">
                     <div class="form-group">
                         <asp:TextBox ID="txtfname" runat="server" CausesValidation="True" class="form-control" placeholder="First Name"></asp:TextBox>
@@ -53,6 +55,8 @@
                     </div>
                    <div class="form-group">
                       <asp:TextBox ID="txtdoj" runat="server" CausesValidation="True" class="form-control" AutoPostBack="True" placeholder="Date of join"></asp:TextBox>
+                       <cc1:CalendarExtender ID="txtdoj_CalendarExtender" runat="server" Enabled="True" TargetControlID="txtdoj">
+                       </cc1:CalendarExtender>
                       <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtdoj" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                    <div class="form-group">
@@ -65,5 +69,6 @@
                 </div>
               </div>
             </div>
+    </html>
     </asp:Content>
 
