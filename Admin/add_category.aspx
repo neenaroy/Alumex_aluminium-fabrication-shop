@@ -6,7 +6,7 @@
      <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Enter Category</h4>
+                  <h4 class="card-title">Add Category</h4>
                   <form class="forms-sample">
                     <div class="form-group">
                         <asp:TextBox ID="txtcatname" runat="server" CausesValidation="True" class="form-control" placeholder="Category Name"></asp:TextBox>
@@ -20,7 +20,7 @@
                     </div>
                       <div class="form-group">
                         <asp:FileUpload ID="FileUpload1" runat="server" />
-                        <asp:Button ID="Button2" runat="server" Text="Upload" class="file-upload-browse btn btn-gradient-primary" OnClick="Button2_Click" CausesValidation="False"  />
+                        <asp:Button ID="Button2" runat="server" Text="Upload" class="file-upload-browse btn btn-gradient-primary" OnClick="Button2_Click"  />
                         <asp:Image ID="Image1" runat="server" Height="150px" Width="200px" />
                     </div>
                    <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-gradient-primary mr-2"   />
