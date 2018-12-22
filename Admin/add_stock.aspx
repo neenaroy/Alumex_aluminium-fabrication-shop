@@ -37,7 +37,7 @@
                         <asp:CompareValidator runat="server" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtqnty" ErrorMessage="Value must be a whole number" ForeColor="Red" />
                       </div>
                       <div class="form-group">
-                          <label for="shopnmaes">Shop Name</label>
+                          <label for="shopnames">Shop Name</label>
                           <asp:DropDownList ID="DropDownList1" runat="server" class="form-control form-control-sm" DataSourceID="SqlDataSource1" DataTextField="shop_name" DataValueField="shop_name"></asp:DropDownList>
                           <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [shop_name] FROM [shop_tb]"></asp:SqlDataSource>
                       </div>
