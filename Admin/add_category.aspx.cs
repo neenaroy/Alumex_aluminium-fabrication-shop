@@ -47,9 +47,9 @@ public partial class Admin_add_category : System.Web.UI.Page
         cmd1.CommandType = CommandType.StoredProcedure;
         cmd1.Parameters.Add("@flag", 0);
         cmd1.Parameters.Add("@cat_id", get_id());
-        cmd1.Parameters.Add("@cat_name", txtcatname.Text); 
-        cmd1.Parameters.Add("@cat_image", ViewState["path"].ToString());
+        cmd1.Parameters.Add("@cat_name", txtcatname.Text);
         cmd1.Parameters.Add("@cat_description", txtdes.Text);
+        cmd1.Parameters.Add("@cat_image", ViewState["path"].ToString());
         cmd1.ExecuteNonQuery();
 
     }
@@ -59,7 +59,7 @@ public partial class Admin_add_category : System.Web.UI.Page
         {
             String filename = Path.Combine(Server.MapPath("~/Admin/images/"), FileUpload1.FileName);
             String strExtension = Path.GetExtension(FileUpload1.FileName).ToLower();
-            if (strExtension == ".jpg" || strExtension == ".bmp" || strExtension == ".gif" || strExtension == ".png")
+            if (strExtension == ".jpg" || strExtension == ".bmp" || strExtension == ".gif" || strExtension == ".png" || strExtension == ".jpeg")
             {
                 FileUpload1.SaveAs(filename);
                 Image1.ImageUrl = "~/guest/images/" + FileUpload1.FileName;
