@@ -71,7 +71,29 @@ public partial class Admin_add_category : System.Web.UI.Page
         cmd1.Parameters.Add("@cat_name", txtcatname.Text);
         cmd1.Parameters.Add("@cat_description", txtdes.Text);
         cmd1.Parameters.Add("@cat_image", ViewState["filepath"].ToString());
-        cmd1.ExecuteNonQuery();
-        Response.Write("<script>alert('Category added sucessfully')</script>");
+        SqlCommand cmd2 = new SqlCommand("spcategory", obj.con);
+        cmd2.CommandType = CommandType.StoredProcedure;
+        cmd2.Parameters.Add("@flag", 3);
+        cmd2.Parameters.Add("@cat_name", txtcatname.Text);
+        DataTable dt = new DataTable();
+        SqlDataAdapter adt = new SqlDataAdapter(cmd2);
+        adt.Fill(dt);
+        if (dt.Rows.Count > 0)
+          {
+              Response.Write("<script>alert('Category already exist')</script>");
+
+          }
+        else
+          {
+             cmd1.ExecuteNonQuery();
+             obj.closeconnect();
+             Response.Write("<script>alert('category added succesfully')</script>");
+            clear();
+          }
+    }
+    protected void clear()
+    {
+        txtcatname.Text = "";
+        txtdes.Text = "";
     }
 }

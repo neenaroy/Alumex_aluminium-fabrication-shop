@@ -70,6 +70,7 @@ public partial class Admin_add_employee : System.Web.UI.Page
         else
           {
              cmd1.ExecuteNonQuery();
+             obj.closeconnect();
              Response.Write("<script>alert(' Employee added succesfully')</script>");
             clear();
           }

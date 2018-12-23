@@ -22,7 +22,7 @@ public class Class1
         con = new SqlConnection(str);
         con.Open();
     }
-    public void getclose()
+    public void closeconnect()
     {
         con.Close();
     }

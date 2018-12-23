@@ -57,6 +57,7 @@ public partial class Admin_add_stock : System.Web.UI.Page
         cmd1.Parameters.Add("@invoice_number", txtinvoice.Text);
         cmd1.Parameters.Add("@invoice_date", txtinvoicedate.Text);
         cmd1.ExecuteNonQuery();
+        obj.closeconnect();
         Response.Write("<script>alert(' Stock added succesfully')</script>");
         clear();
           

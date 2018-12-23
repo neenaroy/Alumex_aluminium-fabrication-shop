@@ -67,6 +67,7 @@ public partial class Admin_add_shop : System.Web.UI.Page
         else
           {
              cmd1.ExecuteNonQuery();
+             obj.closeconnect();
              Response.Write("<script>alert(' Shop added succesfully')</script>");
             clear();
           }
