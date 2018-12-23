@@ -71,4 +71,24 @@
             </div>
     </html>
     </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                 <div class="nav-profile-text">
+                      <p class="mb-1 text-black">Employee</p>
+                  </div>
+              </a>
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="add_employee.aspx">
+                Add employee
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="add_attendence.aspx">
+               Attendance
+              </a>
+            </div>
+          </li>
+        </ul>
+    </asp:Content>
 

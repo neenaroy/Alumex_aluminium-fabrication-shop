@@ -63,4 +63,28 @@
               </div>
              </div>
 </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                 <div class="nav-profile-text">
+                      <p class="mb-1 text-black">Stock</p>
+                  </div>
+              </a>
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="add_stock.aspx">
+                Add Stock
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="add_sell.aspx">
+               In_stock
+              </a>
+                 <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="add_sell.aspx">
+               Out_stock
+              </a>
+            </div>
+          </li>
+        </ul>
+    </asp:Content>
 

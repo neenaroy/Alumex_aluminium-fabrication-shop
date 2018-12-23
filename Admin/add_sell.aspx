@@ -5,6 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    
     <div class="col-12 grid-margin stretch-card">
               <div class="card"><div class="card-body">
                   <h4 class="card-title">
@@ -33,4 +34,23 @@
               </div>
              </div>
 </asp:Content>
-
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                 <div class="nav-profile-text">
+                      <p class="mb-1 text-black">Sell</p>
+                  </div>
+              </a>
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="add_sell.aspx">
+                Add Sell
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="add_sell.aspx">
+                Signout
+              </a>
+            </div>
+          </li>
+        </ul>
+    </asp:Content>

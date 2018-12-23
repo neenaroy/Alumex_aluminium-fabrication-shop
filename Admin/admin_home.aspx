@@ -22,8 +22,8 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo" href="admin_home.aspx"><img src="images/logo.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="admin_home.aspx"><img src="images/logo-mini.svg" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-stretch">
         <div class="search-field d-none d-md-block">
@@ -46,12 +46,12 @@
           <li class="nav-item nav-profile">
             <a href="#" class="nav-link">
               <div class="nav-profile-image">
-                <img src="images/faces/face1.jpg" alt="profile">
+                <img src="images/soji.jpg" alt="profile">
                 <span class="login-status online"></span> <!--change to offline or busy as needed-->              
               </div>
               <div class="nav-profile-text d-flex flex-column">
-                <span class="font-weight-bold mb-2">David Grey. H</span>
-                <span class="text-secondary text-small">Project Manager</span>
+                <span class="font-weight-bold mb-2">Soji Joy</span>
+                <span class="text-secondary text-small">Managing Director</span>
               </div>
               <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             </a>
@@ -66,7 +66,6 @@
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-title">Employee</span>
               <i class="menu-arrow"></i>
-              <i class="mdi mdi-crosshairs-gps menu-icon"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
@@ -75,20 +74,31 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/icons/mdi.html">
+         <li class="nav-item">
+            <a class="nav-link" href="add_stock.aspx">
               <span class="menu-title">Stock</span>
-              <i class="mdi mdi-contacts menu-icon"></i>
+              <i class="mdi mdi-chart-bar menu-icon"></i>
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="add_shop.aspx">
+              <span class="menu-title">Shop</span>
+              <i class="mdi mdi-chart-bar menu-icon"></i>
+            </a>
+          <li class="nav-item">
+            <a class="nav-link" href="add_category.aspx">
+              <span class="menu-title">Category</span>
+              <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
+            <a class="nav-link" href="add_model.aspx">
               <span class="menu-title">Model</span>
-              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+              <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/charts/chartjs.html">
+           <li class="nav-item">
+            <a class="nav-link" href="Manage_customer">
               <span class="menu-title">Customer</span>
               <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
@@ -99,8 +109,8 @@
               <i class="mdi mdi-table-large menu-icon"></i>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../logout.aspx">
+            <li class="nav-item">
+            <a class="nav-link" href="logout.aspx">
               <span class="menu-title">Logout</span>
               <i class="mdi mdi-table-large menu-icon"></i>
             </a>
@@ -121,7 +131,7 @@
               </ul>
               </div>
           </li>
-          <li class="nav-item sidebar-actions">
+           <li class="nav-item sidebar-actions">
             <span class="nav-link">
               <div class="border-bottom">
                 <h6 class="font-weight-normal mb-3">Projects</h6>                
