@@ -39,20 +39,6 @@ public partial class Admin_add_category : System.Web.UI.Page
         id = id + 1;
         return id;
     }
-    protected void Button1_Click(object sender, EventArgs e)
-    {
-        Class1 obj = new Class1();
-        obj.getconnect();
-        SqlCommand cmd1 = new SqlCommand("spcategory", obj.con);
-        cmd1.CommandType = CommandType.StoredProcedure;
-        cmd1.Parameters.Add("@flag", 0);
-        cmd1.Parameters.Add("@cat_id", get_id());
-        cmd1.Parameters.Add("@cat_name", txtcatname.Text);
-        cmd1.Parameters.Add("@cat_description", txtdes.Text);
-        cmd1.Parameters.Add("@cat_image", ViewState["path"].ToString());
-        cmd1.ExecuteNonQuery();
-
-    }
     protected void Button2_Click(object sender, EventArgs e)
     {
         if (FileUpload1.HasFile)
@@ -62,14 +48,30 @@ public partial class Admin_add_category : System.Web.UI.Page
             if (strExtension == ".jpg" || strExtension == ".bmp" || strExtension == ".gif" || strExtension == ".png" || strExtension == ".jpeg")
             {
                 FileUpload1.SaveAs(filename);
-                Image1.ImageUrl = "~/guest/images/" + FileUpload1.FileName;
-                ViewState["imgpath"] = Image1.ImageUrl;
+                Image1.ImageUrl = "~/Admin/images/" + FileUpload1.FileName;
+                ViewState["filepath"] = Image1.ImageUrl;
             }
             else
             {
                 Response.Write("<script>alert('Please choose image')</script>");
 
+
             }
         }
-    }   
+    }
+    protected void Button1_Click1(object sender, EventArgs e)
+    {
+        Class1 obj = new Class1();
+        obj.getconnect();
+        String filename = Path.Combine(Server.MapPath("~/Admin/images/"), FileUpload1.FileName);
+        SqlCommand cmd1 = new SqlCommand("spcategory", obj.con);
+        cmd1.CommandType = CommandType.StoredProcedure;
+        cmd1.Parameters.Add("@flag", 0);
+        cmd1.Parameters.Add("@cat_id", get_id());
+        cmd1.Parameters.Add("@cat_name", txtcatname.Text);
+        cmd1.Parameters.Add("@cat_description", txtdes.Text);
+        cmd1.Parameters.Add("@cat_image", ViewState["filepath"].ToString());
+        cmd1.ExecuteNonQuery();
+        Response.Write("<script>alert('Category added sucessfully')</script>");
+    }
 }

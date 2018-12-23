@@ -16,14 +16,14 @@
                       <div class="form-group">
                       <asp:TextBox ID="txtdes" runat="server" CausesValidation="True" class="form-control" placeholder="Description" TextMode="MultiLine" ></asp:TextBox>
                       <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtdes" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                      <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtdes" ErrorMessage="Enter something meaningful" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
+                     <!-- <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtdes" ErrorMessage="Enter something meaningful" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>-->
                     </div>
                       <div class="form-group">
                         <asp:FileUpload ID="FileUpload1" runat="server" />
                         <asp:Button ID="Button2" runat="server" Text="Upload" class="file-upload-browse btn btn-gradient-primary" OnClick="Button2_Click"  />
                         <asp:Image ID="Image1" runat="server" Height="150px" Width="200px" />
                     </div>
-                   <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-gradient-primary mr-2"   />
+                   <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-gradient-primary mr-2" OnClick="Button1_Click1"   />
                   </form>
                 </div>
               </div>
