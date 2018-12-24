@@ -372,7 +372,6 @@
 				<p class="mt-4"> Praesent in congue leo, et rutrum justo. Integer porta nulla eu lorem.</p>
 				<a href="single.html">View Post</a>
 			</div>
-			<div class="row news-grids"></div>
 			<div class="col-md-4 mt-md-0 mt-5 newsgrid1 text-center">
 				<img src="images/3.jpg" alt="news image" class="img-fluid" />
 				<h4 class=" mt-4 text-uppercase">Interior Design Tips</h4>
