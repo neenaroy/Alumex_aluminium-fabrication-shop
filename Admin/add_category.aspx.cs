@@ -50,13 +50,15 @@ public partial class Admin_add_category : System.Web.UI.Page
                 FileUpload1.SaveAs(filename);
                 Image1.ImageUrl = "~/Admin/images/" + FileUpload1.FileName;
                 ViewState["filepath"] = Image1.ImageUrl;
+            }    
+            else
+            {
+                Response.Write("<script>alert('Select a valid image')</script>");
             }
+        }
             else
             {
                 Response.Write("<script>alert('Please choose image')</script>");
-
-
-            }
         }
     }
     protected void Button1_Click1(object sender, EventArgs e)

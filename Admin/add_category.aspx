@@ -25,7 +25,7 @@
                     </div>
                    <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-gradient-primary mr-2" OnClick="Button1_Click1"   />
                   </form>
-                </div>
+                    </div>
               </div>
             </div>
 </asp:Content>
