@@ -88,7 +88,7 @@
                                             <asp:TextBox ID="txtmobile" runat="server" CausesValidation="True" class="form-control" placeholder="Phone Number"></asp:TextBox>
                                         </div>
 										<div class="form-group">
-                                         <asp:TextBox ID="txtpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Password"></asp:TextBox>
+                                         <asp:TextBox ID="txtpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Password" TextMode="Password"></asp:TextBox>
 										</div>
 										<div class="form-group">
                                          <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-primary btn-send-message" OnClick="Button1_Click"  />

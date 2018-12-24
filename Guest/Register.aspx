@@ -122,9 +122,12 @@
                                     </div>
                                     <div class="form-group">
                                              <asp:TextBox ID="txtpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Password"></asp:TextBox>
-                                     </div>
+                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtpswd" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    </div>
                                     <div class="form-group">
                                          <asp:TextBox ID="txtrpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Confirm Password"></asp:TextBox>
+                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtrpswd" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="CompareValidator" ControlToCompare="txtpswd" ControlToValidate="txtrpswd" ForeColor="Red"></asp:CompareValidator>
                                     </div>
 					                <div class="form-group">
                                      <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-primary btn-send-message" OnClick="Button1_Click"   />
