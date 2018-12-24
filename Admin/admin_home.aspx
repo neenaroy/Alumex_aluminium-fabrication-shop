@@ -18,12 +18,13 @@
  <!-- <link rel="shortcut icon" href="images/favicon.png" />-->
 </head>
     <body>
-        <div class="container-scroller">
+        
+    <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="admin_home.aspx"><img src="images/logo.svg" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="admin_home.aspx"><img src="images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo" href="admin_home.aspx"><img src="images/logo.svg" alt="logo"/></a>&nbsp;
+          <a class="navbar-brand brand-logo-mini" href="admin_home"><img src="images/logo-mini.svg" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-stretch">
         <div class="search-field d-none d-md-block">
@@ -36,9 +37,35 @@
             </div>
           </form>
         </div>
-       </div>
+         <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <div class="nav-profile-img">
+                <img src="images/soji.jpg" alt="image">
+                <span class="availability-status online"></span>             
+              </div>
+              <div class="nav-profile-text">
+                <p class="mb-1 text-black">Soji Joy</p>
+              </div>
+            </a>
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="logout.aspx">
+                <i class="mdi mdi-logout mr-2 text-primary"></i>
+                Signout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item d-none d-lg-block full-screen-link">
+            <a class="nav-link">
+              <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+            </a>
+          </li>           
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
     </nav>
-        
              <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -77,44 +104,37 @@
          <li class="nav-item">
             <a class="nav-link" href="add_stock.aspx">
               <span class="menu-title">Stock</span>
-              <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
           </li>
             <li class="nav-item">
             <a class="nav-link" href="add_shop.aspx">
               <span class="menu-title">Shop</span>
-              <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
           <li class="nav-item">
             <a class="nav-link" href="add_category.aspx">
               <span class="menu-title">Category</span>
-              <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="add_model.aspx">
               <span class="menu-title">Model</span>
-              <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
           </li>
            <li class="nav-item">
             <a class="nav-link" href="Manage_customer">
               <span class="menu-title">Customer</span>
-              <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/tables/basic-table.html">
               <span class="menu-title">Tables</span>
-              <i class="mdi mdi-table-large menu-icon"></i>
             </a>
           </li>
-            <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="logout.aspx">
               <span class="menu-title">Logout</span>
-              <i class="mdi mdi-table-large menu-icon"></i>
-            </a>
-          </li>
+                <i class="mdi mdi-logout mr-2 text-primary"></i>
+             </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
               <span class="menu-title">Sample Pages</span>
@@ -164,17 +184,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Recent Updates</h4>
-                  <div class="d-flex">
-                    <div class="d-flex align-items-center mr-4 text-muted font-weight-light">
-                      <i class="mdi mdi-account-outline icon-sm mr-2"></i>
-                      <span>jack Menqu</span>
-                    </div>
-                    <div class="d-flex align-items-center text-muted font-weight-light">
-                      <i class="mdi mdi-clock icon-sm mr-2"></i>
-                      <span>October 3rd, 2018</span>
-                    </div>
-                  </div>
-                  <div class="row mt-3">
+                   <div class="row mt-3">
                     <div class="col-6 pr-1">
                       <img src="images/dashboard/cp7.jpg" class="mb-2 mw-100 w-100 rounded" alt="image">
                       <img src="images/dashboard/work_thumb_3.jpg" class="mw-100 w-100 rounded" alt="image">
@@ -184,26 +194,14 @@
                       <img src="images/dashboard/cp2.jpg" class="mw-100 w-100 rounded" alt="image">
                     </div>
                   </div>
-                  <div class="d-flex mt-5 align-items-top">
-                    <img src="images/faces/face3.jpg" class="img-sm rounded-circle mr-3" alt="image">
-                    <div class="mb-0 flex-grow">
-                      <h5 class="mr-2 mb-2">School Website - Authentication Module.</h5>
-                      <p class="mb-0 font-weight-light">It is a long established fact that a reader will be distracted by the readable
-                        content of a page.</p>
-                    </div>
-                    <div class="ml-auto">
-                      <i class="mdi mdi-heart-outline text-muted"></i>
-                    </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
      <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap Dash</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 . All rights reserved.</span>
           </div>
         </footer>
         <!-- partial -->
