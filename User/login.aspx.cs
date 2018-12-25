@@ -38,7 +38,7 @@ public partial class User_login : System.Web.UI.Page
             }
     else
             {
-                Response.Redirect("~/guest/userhome.aspx");
+                Response.Redirect("~/User/userhome.aspx");
                 Session.RemoveAll();
             }
         }
