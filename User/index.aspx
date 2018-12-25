@@ -72,7 +72,7 @@
 						</a>
 						<ul class="dropdown-menu agile_short_dropdown">
 							<li>
-								<a href="error.html">Error Page</a>
+								<a href="add_feedback.aspx">Error Page</a>
 							</li>
 							<li>
 								<a href="single.html">Single Page</a>

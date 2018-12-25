@@ -47,7 +47,7 @@ public partial class User_add_feedback : System.Web.UI.Page
         cmd.Parameters.Add("@mobile", Session["username"].ToString());
         cmd.ExecuteNonQuery();
         obj.closeconnect();
-        Response.Write("<script>alert('incorrect password')</script>");
+        Response.Write("<script>alert('Feedback send sucessfully')</script>");
         clear();
         }
     protected void clear()

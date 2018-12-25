@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <section class="contact py-5">
 	<div class="container">
-		<h2 class="heading text-capitalize mb-sm-5 mb-4">Enter Your Details.... </h2>
+		<h2 class="heading text-capitalize mb-sm-5 mb-4">Enter Your Feedback.... </h2>
 			<div class="mail_grid_w3l">
                	<div class="row">
 						<div class="col-md-6 contact_left_grid" data-aos="fade-right">
