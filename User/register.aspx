@@ -142,6 +142,7 @@
                             <div class="contact-fields-w3ls">
                                  <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-primary btn-send-message" OnClick="Button1_Click"   />
 							</div>
+                         </div>
 					</div>
                 </form>
 			</div>
