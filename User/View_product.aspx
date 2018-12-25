@@ -4,32 +4,26 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <section>
-    <asp:DataList ID="DataList2" runat="server" RepeatColumns="4">
-  <ItemStyle CssClass="igrid" />
-    <ItemTemplate>
-        <table class="tbl" >
-            <tr>
-                <td style="text-align: center">
-                    <asp:Image ID="Image2" runat="server"  CssClass="img" ImageUrl='<%#Eval("cat_image") %>' />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                                Name :
-                                <asp:Label ID="Label1" runat="server" Text='<%#Eval("cat_name") %>'></asp:Label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                               
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("cat_id") %>'>View..</asp:LinkButton>
-                </td>
-            </tr>
-        </table>
-    </ItemTemplate>
-</asp:DataList>
-
+    <table class="auto-style1">
+        <tr>
+            <td class="auto-style3" colspan="2"><strong><em>
+                Manage Image</em></strong></td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td style="text-align: center">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2" colspan="2">
+                <asp:Panel ID="Panel1" runat="server">
+                </asp:Panel>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td style="text-align: center">&nbsp;</td>
+        </tr>
+    </table>
     </section>
 </asp:Content>
 
