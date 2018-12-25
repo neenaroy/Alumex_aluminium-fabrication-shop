@@ -4,7 +4,7 @@
 
 <html lang="en">
 <head>
-<title> Intrend Interior Category Flat Bootstrap Responsive Website Template | Error : W3layouts</title>
+<title> Alumex Aluminium Fabrication</title>
 	
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +43,7 @@
 		<div class="container agile-banner_nav">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				
-				<h1><a class="navbar-brand" href="index.html">In <span class="display"> Trend</span></a></h1>
+				<h1><a class="navbar-brand" href="index.html">Alumex<span class="display"> </span></a></h1>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -51,32 +51,32 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="userhome.aspx">Home <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="about.html">About</a>
+							<a class="nav-link" href="about.html">My Orders</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="services.html">Services</a>
-						</li>
-						<li class="dropdown nav-item active">
-							<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Pages
-								<b class="caret"></b>
-							</a>
-							<ul class="dropdown-menu agile_short_dropdown">
-								<li>
-									<a href="error.html">Error Page</a>
-								</li>
-								<li>
-									<a href="single.html">Single Page</a>
-								</li>
-							</ul>
+							<a class="nav-link" href="services.html">My Cart</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="projects.html">Projects</a>
 						</li>
+                        <li class="dropdown nav-item active">
+							<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Feedback
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu agile_short_dropdown">
+								<li>
+									<a href="add_feedback.aspx">Add Feedback</a>
+								</li>
+								<li>
+									<a href="edit_delete_feedback.aspx">View</a>
+								</li>
+							</ul>
+						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact</a>
+							<a class="nav-link" href="../logout.aspx">Logout</a>
 						</li>
 					</ul>
 				</div>
