@@ -31,32 +31,34 @@ public partial class Admin_add_attendance : System.Web.UI.Page
         SqlCommand cmd1 = new SqlCommand("spattendance", obj.con);
         cmd1.CommandType = CommandType.StoredProcedure;
         cmd1.Parameters.Add("@flag",0);
-        cmd1.Parameters.Add("@emp_id",get_id());
-        cmd1.Parameters.Add("@emp_fname", txtfname.Text);
-        cmd1.Parameters.Add("@emp_lname", txtlname.Text);
-        cmd1.Parameters.Add("@emp_house", txthousename.Text);
-        cmd1.Parameters.Add("@emp_email", txtemail.Text);
-        cmd1.Parameters.Add("@emp_mobile", txtmobile.Text);
-        cmd1.Parameters.Add("@emp_doj", txtdoj.Text);
-        cmd1.Parameters.Add("@emp_loc", txtloc.Text);
+         cmd1.Parameters.Add("@att_date",txtdoa.Text);
+         cmd1.ExecuteNonQuery();
+       //  cmd1.Parameters.Add("@att_status",);
+       /*  cmd1.Parameters.Add("@emp_lname", txtlname.Text);
+         cmd1.Parameters.Add("@emp_house", txthousename.Text);
+         cmd1.Parameters.Add("@emp_email", txtemail.Text);
+         cmd1.Parameters.Add("@emp_mobile", txtmobile.Text);
+         cmd1.Parameters.Add("@emp_doj", txtdoj.Text);
+         cmd1.Parameters.Add("@emp_loc", txtloc.Text);
 
-        SqlCommand cmd2 = new SqlCommand("spemp", obj.con);
-        cmd2.CommandType = CommandType.StoredProcedure;
-        cmd2.Parameters.Add("@flag", 3);
-        cmd2.Parameters.Add("@emp_mobile", txtmobile.Text);
-        DataTable dt = new DataTable();
-        SqlDataAdapter adt = new SqlDataAdapter(cmd2);
-        adt.Fill(dt);
-        if (dt.Rows.Count > 0)
-          {
-              Response.Write("<script>alert('Employee with same phone number already exist')</script>");
+         SqlCommand cmd2 = new SqlCommand("spemp", obj.con);
+         cmd2.CommandType = CommandType.StoredProcedure;
+         cmd2.Parameters.Add("@flag", 3);
+         cmd2.Parameters.Add("@emp_mobile", txtmobile.Text);
+         DataTable dt = new DataTable();
+         SqlDataAdapter adt = new SqlDataAdapter(cmd2);
+         adt.Fill(dt);
+         if (dt.Rows.Count > 0)
+           {
+               Response.Write("<script>alert('Employee with same phone number already exist')</script>");
 
-          }
-        else
-          {
-             cmd1.ExecuteNonQuery();
-             obj.closeconnect();
-             Response.Write("<script>alert(' Employee added succesfully')</script>");
+           }
+         else
+           {
+              cmd1.ExecuteNonQuery();
+              obj.closeconnect();
+              Response.Write("<script>alert(' Employee added succesfully')</script>");
            
+     }*/
     }
 }

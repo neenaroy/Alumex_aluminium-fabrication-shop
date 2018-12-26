@@ -38,7 +38,7 @@ public partial class Guest_register1 : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-Class1 obj = new Class1();
+            Class1 obj = new Class1();
             obj.getconnect();
             SqlCommand cmd = new SqlCommand("splogin", obj.con);
             cmd.CommandType = CommandType.StoredProcedure;
