@@ -76,7 +76,6 @@ public partial class Guest_Registration : System.Web.UI.Page
             {
                 cmd.ExecuteNonQuery();
                 cmd1.ExecuteNonQuery();
-                obj.closeconnect();
                 Response.Write("<script>alert('Registerd succesfully')</script>");
                 clear();
             }
