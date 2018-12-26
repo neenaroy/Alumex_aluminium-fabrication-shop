@@ -9,21 +9,50 @@
 			<div class="mail_grid_w3l">
                	<div class="row">
 						<div class="col-md-6 contact_left_grid" data-aos="fade-right">
-    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="4" BorderColor="Black" BorderStyle="Solid">
-        <ItemTemplate>
-            
-            <asp:Label ID="cat_nameLabel" runat="server" Text='<%# Eval("cat_name") %>' />
-            <br />
-          
-            <asp:Label ID="cat_descriptionLabel" runat="server" Text='<%# Eval("cat_description") %>' />
-            <br />
-                        <asp:Image ID="Image1" runat="server" BorderColor="#000000" BorderStyle="Double" Height="200px" Width="300px" ImageUrl='<%# Eval("cat_image") %>' />
+                            <asp:DataList ID="DataList1" runat="server" DataKeyField="cat_id" DataSourceID="SqlDataSource1" RepeatColumns="4">
+                                <ItemTemplate>
+                                    <table class="w-100">
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="cat_nameLabel0" runat="server" Font-Bold="True" ForeColor="Black" Text='<%# Eval("cat_name") %>' />
+                                            </td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Image ID="Image1" runat="server" Height="200px" Width="300px" ImageUrl='<%# Eval("cat_image") %>' />
+                                            </td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="cat_descriptionLabel" runat="server" ForeColor="Black" Text='<%# Eval("cat_description") %>' />
+                                            </td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                    <asp:Button ID="Button1" runat="server" CommandName="View More" OnClick="Button1_Click" Text="View More" />
 <br />
-            <br />
-        </ItemTemplate>
-    </asp:DataList>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [cat_name], [cat_description], [cat_image] FROM [category_tb]"></asp:SqlDataSource>
-      	</div>
+                                    <br />
+                                </ItemTemplate>
+                            </asp:DataList>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [cat_name], [cat_description], [cat_image], [cat_id] FROM [category_tb]"></asp:SqlDataSource>
+                        </div>
                </div>
 			</div>
 		</div>
