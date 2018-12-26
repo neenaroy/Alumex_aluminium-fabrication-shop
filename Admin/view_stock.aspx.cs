@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class User_edit_delete_feedback : System.Web.UI.Page
+public partial class Admin_view_stock : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

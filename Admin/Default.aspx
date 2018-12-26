@@ -11,7 +11,7 @@
                 <tr>
                     <td>
                         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                        <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl='<%# Eval("cat_image") %>' />
+                      <!--  <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl='<%# Eval("cat_image") %>' />-->
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
