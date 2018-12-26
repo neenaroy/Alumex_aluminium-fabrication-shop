@@ -1,10 +1,11 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="user.master.cs" Inherits="User_user" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMaster.master.cs" Inherits="User_UserMaster" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-  <title>Alumex Aluminium Fabrication</title>
+<<html lang="en">
+<head>
+<title>Alumex Aluminium Fabrication</title>
 	
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,11 +32,11 @@
 	<!-- web-fonts -->
 	<link href="//fonts.googleapis.com/css?family=Poiret+One&amp;subset=cyrillic,latin-ext" rel="stylesheet">
 	<!-- //web-fonts -->
-  <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
- <!-- banner -->
+    <!-- banner -->
 <div class="inner-page-banner" id="home"> 	   
 	<!--Header-->
 	<header>
@@ -87,16 +88,15 @@
 </div>
 <!-- //banner --> 
 
-   <form id="form1" runat="server">
-  
+    <form id="form1" runat="server">
+    <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    
-   </form>
+    </div>
+    </form>
 
-
-   <!-- js-scripts -->		
+    <!-- js-scripts -->		
 
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
@@ -135,6 +135,5 @@
 	<!-- start-smoth-scrolling -->
 	
 <!-- //js-scripts -->
-
 </body>
 </html>

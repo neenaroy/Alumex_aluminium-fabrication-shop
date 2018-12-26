@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="user.master.cs" Inherits="User_user" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="guest.master.cs" Inherits="Guest_guest" %>
 
 <!DOCTYPE html>
 
@@ -31,11 +31,11 @@
 	<!-- web-fonts -->
 	<link href="//fonts.googleapis.com/css?family=Poiret+One&amp;subset=cyrillic,latin-ext" rel="stylesheet">
 	<!-- //web-fonts -->
-  <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
- <!-- banner -->
+<!-- banner -->
 <div class="inner-page-banner" id="home"> 	   
 	<!--Header-->
 	<header>
@@ -88,15 +88,12 @@
 <!-- //banner --> 
 
    <form id="form1" runat="server">
-  
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
+       </form>
     
-   </form>
-
-
-   <!-- js-scripts -->		
+    <!-- js-scripts -->		
 
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>

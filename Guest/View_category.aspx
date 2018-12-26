@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/user.master" AutoEventWireup="true" CodeFile="view_category.aspx.cs" Inherits="User_view_category" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Guest/guest.master" AutoEventWireup="true" CodeFile="View_category.aspx.cs" Inherits="Guest_View_category" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server" >
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <section class="contact py-5">
 	<div class="container">
 		<h2 class="heading text-capitalize mb-sm-5 mb-4">Our Sevices</h2>
@@ -47,7 +47,7 @@
                                             <td>&nbsp;</td>
                                         </tr>
                                     </table>
-                                    <asp:Button ID="Button1" runat="server" CommandName="View More" OnClick="Button1_Click" Text="View More" />
+                                    <asp:Button ID="Button1" runat="server" CommandName="View More"  Text="View More" />
 <br />
                                     <br />
                                 </ItemTemplate>
@@ -59,6 +59,6 @@
       
 		</div>
 </section>
-</asp:Content>
 
+</asp:Content>
 

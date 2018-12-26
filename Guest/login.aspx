@@ -1,11 +1,10 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="user.master.cs" Inherits="User_user" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="Guest_login" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-  <title>Alumex Aluminium Fabrication</title>
-	
+  <title>Alumex Aluminium Fabrication</title>	
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -31,8 +30,6 @@
 	<!-- web-fonts -->
 	<link href="//fonts.googleapis.com/css?family=Poiret+One&amp;subset=cyrillic,latin-ext" rel="stylesheet">
 	<!-- //web-fonts -->
-  <asp:ContentPlaceHolder id="head" runat="server">
-    </asp:ContentPlaceHolder>
 </head>
 <body>
  <!-- banner -->
@@ -42,7 +39,7 @@
 		<div class="container agile-banner_nav">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				
-				<h1><a class="navbar-brand" href="index.html">In <span class="display"> Trend</span></a></h1>
+				<h1><a class="navbar-brand" href="index.html">Alumex <span class="display"></span></a></h1>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -87,16 +84,35 @@
 </div>
 <!-- //banner --> 
 
-   <form id="form1" runat="server">
-  
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    
-   </form>
 
-
-   <!-- js-scripts -->		
+<!-- contact -->
+<section class="contact py-5">
+	<div class="container">
+		<h2 class="heading text-capitalize mb-sm-5 mb-4">Sign In </h2>
+			<div class="mail_grid_w3l">
+      		<form runat="server" >
+					<div class="row">
+						<div class="col-md-6 contact_left_grid" data-aos="fade-right">
+							<div class="contact-fields-w3ls">
+                             <asp:TextBox ID="txtmobile" runat="server" CausesValidation="True" class="form-control" placeholder="Phone Number"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtmobile" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtmobile" ErrorMessage="Enter a valid number" ForeColor="Red" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>          
+							</div>
+							<div class="contact-fields-w3ls">
+                              <asp:TextBox ID="txtpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Password" TextMode="Password"></asp:TextBox>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtpswd" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+							</div>
+							<div class="contact-fields-w3ls">
+                             <asp:Button ID="Button1" runat="server" Text="Sign In" class="btn btn-primary btn-send-message" OnClick="Button1_Click"  />
+							</div>
+						</div>
+					</div>
+                </form>
+			</div>
+		</div>
+</section>
+   
+<!-- js-scripts -->		
 
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
@@ -134,7 +150,7 @@
 	<!-- //here ends scrolling icon -->
 	<!-- start-smoth-scrolling -->
 	
-<!-- //js-scripts -->
-
+<!-- //js-scripts -->  
 </body>
 </html>
+

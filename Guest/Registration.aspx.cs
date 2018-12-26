@@ -10,7 +10,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class User_register : System.Web.UI.Page
+public partial class Guest_Registration : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -37,7 +37,7 @@ public partial class User_register : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-          Class1 obj = new Class1();
+        Class1 obj = new Class1();
             obj.getconnect();
             SqlCommand cmd = new SqlCommand("splogin", obj.con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -47,7 +47,7 @@ public partial class User_register : System.Web.UI.Page
             cmd.Parameters.Add("@password", txtpswd.Text);
             cmd.Parameters.Add("@usertype", "user");
 
-            SqlCommand cmd1 = new SqlCommand("spregisterqqqqqqqqq", obj.con);
+            SqlCommand cmd1 = new SqlCommand("spregister", obj.con);
             cmd1.CommandType = CommandType.StoredProcedure;
             cmd1.Parameters.Add("@flag", 0);
             cmd1.Parameters.Add("@reg_id", get_id());
