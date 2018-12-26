@@ -14,7 +14,11 @@ public partial class User_add_feedback : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["username"].ToString() == "")
+        {
+            Response.Redirect("~/User/login.aspx");
 
+        }
     }
     protected int get_id()
     {

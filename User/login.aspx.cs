@@ -18,7 +18,7 @@ public partial class User_login : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-   Class1 obj = new Class1();
+         Class1 obj = new Class1();
         obj.getconnect();
         SqlCommand cmd1 = new SqlCommand("splogin", obj.con);
         cmd1.CommandType = CommandType.StoredProcedure;
@@ -34,6 +34,7 @@ public partial class User_login : System.Web.UI.Page
             Session["username"] = txtmobile.Text;
                 if (dt1.Rows[0][3].ToString().CompareTo("admin") == 0)
             {
+                clear();
                 Response.Redirect("~/Admin/admin_home.aspx");
             }
     else
@@ -45,7 +46,7 @@ public partial class User_login : System.Web.UI.Page
     else
         {
             Response.Write("<script>alert('incorrect password')</script>");
-            clear();
+            
         }
     }
     protected void clear()
