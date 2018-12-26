@@ -19,7 +19,7 @@ public partial class User_register : System.Web.UI.Page
     protected int get_id()
     {
         int id = 0;
-        Class1 obj = new Class1();
+     /*   Class1 obj = new Class1();
         obj.getconnect();
         SqlCommand cmd = new SqlCommand("splogin", obj.con);
         cmd.CommandType = CommandType.StoredProcedure;
