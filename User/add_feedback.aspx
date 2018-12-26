@@ -17,6 +17,7 @@
                                  <asp:Button ID="Button1" runat="server" Text="Send" class="btn btn-primary btn-send-message" OnClick="Button1_Click"   />
 							</div>
 					</div>
+               </div>
 			</div>
 		</div>
 </section>
