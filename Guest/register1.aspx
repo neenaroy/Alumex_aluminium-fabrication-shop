@@ -125,7 +125,7 @@
                             </div>
                             <div class="contact-fields-w3ls">
                                   <asp:TextBox ID="txtpswd" runat="server" class="form-control" placeholder="Password"></asp:TextBox>
-                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*" ControlToValidate="txtpswd" ForeColor="Red"></asp:RequiredFieldValidator>
+                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*" ControlToValidate="txtpswd" ForeColor="Maroon"></asp:RequiredFieldValidator>
                             </div>
                             <div class="contact-fields-w3ls">
                                   <asp:TextBox ID="txtrepswd" runat="server" class="form-control" placeholder="Retype Password"></asp:TextBox>
