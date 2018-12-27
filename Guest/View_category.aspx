@@ -47,7 +47,7 @@
                                             <td>&nbsp;</td>
                                         </tr>
                                     </table>
-                                    <asp:Button ID="Button1" runat="server" CommandName="View More"  Text="View More" />
+                                    <asp:Button ID="Button1" runat="server" CommandName="View More"  Text="View More" class="btn scroll" />
 <br />
                                     <br />
                                 </ItemTemplate>

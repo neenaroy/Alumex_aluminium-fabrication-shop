@@ -1799,7 +1799,6 @@ iframe {
     width: 100%;
     resize: none;
 }
-.mail_grid_w3l input[type="su
 .mail_grid_w3l input[type="submit"] {
     outline: none;
     padding: 13px 50px;
@@ -1811,7 +1810,7 @@ iframe {
     text-transform: capitalize;
     letter-spacing: 2px;
 }
-it"]:hover {
+.mail_grid_w3l input[type="submit"]:hover {
     background: #333;
 }
 /*-- //contact --*/

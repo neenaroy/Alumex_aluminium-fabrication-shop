@@ -96,13 +96,13 @@ public partial class Admin_add_model : System.Web.UI.Page
             clear();
           }
      
-        SqlCommand cmd3 = new SqlCommand("spmodel", obj.con);
+       /* SqlCommand cmd3 = new SqlCommand("spmodel", obj.con);
         cmd3.CommandType = CommandType.StoredProcedure;
         cmd3.Parameters.Add("@flag", 0);
         cmd3.Parameters.Add("@model_id", get_id());
         cmd3.Parameters.Add("@mediatype", "0");
         cmd3.Parameters.Add("@cat_name", DropDownList1.ToString());
-        cmd3.ExecuteNonQuery();
+        cmd3.ExecuteNonQuery();*/
        
     }
     protected void clear()
