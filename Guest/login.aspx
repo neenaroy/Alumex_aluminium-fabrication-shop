@@ -53,10 +53,6 @@
 						<a class="nav-link" href="about.aspx">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="services.html">Services</a>
-					</li>
-					
-					<li class="nav-item">
 						<a class="nav-link" href="View_projects.aspx">Projects</a>
 					</li>
 					<li class="nav-item">

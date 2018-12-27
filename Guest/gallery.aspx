@@ -61,10 +61,6 @@
 						<a class="nav-link" href="about.aspx">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="services.html">Services</a>
-					</li>
-					
-					<li class="nav-item">
 						<a class="nav-link" href="gallery.aspx">Gallery</a>
 					</li>
 					<li class="nav-item">

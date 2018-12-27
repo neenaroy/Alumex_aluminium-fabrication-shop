@@ -54,10 +54,6 @@
 						<a class="nav-link" href="about.aspx">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="services.html">Services</a>
-					</li>
-					
-					<li class="nav-item">
 						<a class="nav-link" href="View_projects.aspx">Projects</a>
 					</li>
 					<li class="nav-item">
@@ -75,8 +71,7 @@
 </div>
 <!-- //banner --> 
 
-
-    <section class="contact py-5">
+ <section class="contact py-5">
 	<div class="container">
 		<h2 class="heading text-capitalize mb-sm-5 mb-4">Enter Your Details.... </h2>
 			<div class="mail_grid_w3l">
@@ -121,10 +116,11 @@
                                   <asp:TextBox ID="txtrepswd" runat="server" class="form-control" placeholder="Retype Password"></asp:TextBox>
                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="*" ControlToValidate="txtrepswd" ForeColor="Red"></asp:RequiredFieldValidator>
                                   <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password Mismatch" ControlToCompare="txtpswd" ControlToValidate="txtrepswd" ForeColor="Red"></asp:CompareValidator> </div>
-                            <div class="contact-fields-w3ls">  
+                           </div>
+                             <div class="contact-fields-w3ls">  
                                   <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />&nbsp;<a href="login.aspx"><b><i>Already Sign Up?</i></b></a>
                             </div>
-                            </div>
+                            
 				    	</div>
                      </form>
                  </div>
