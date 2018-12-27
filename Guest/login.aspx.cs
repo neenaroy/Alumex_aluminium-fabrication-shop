@@ -39,7 +39,7 @@ public partial class Guest_login : System.Web.UI.Page
             }
             else
             {
-                Response.Redirect("~/User/userhome.aspx");
+                Response.Redirect("~/Guest/guesthome.aspx");
                 Session.RemoveAll();
             }
         }

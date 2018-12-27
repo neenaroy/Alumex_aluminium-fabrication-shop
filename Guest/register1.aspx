@@ -46,34 +46,38 @@
 				</button>
 
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					 <ul class="navbar-nav ml-auto">
+					    <li class="nav-item">
+							<a class="nav-link" href="guesthome.aspx">Home <span class="sr-only">(current)</span></a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="View_projects.aspx">Projects</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="about.html">About</a>
+							<a class="nav-link" href="view_cart.aspx">My Cart</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="services.html">Services</a>
+							<a class="nav-link" href="add_orders.aspx">My Orders</a>
 						</li>
-						<li class="dropdown nav-item">
-							<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Pages
+						<li class="nav-item">
+							<a class="nav-link" href="view_bill.aspx">Bill</a>
+						</li>
+						
+                        <li class="dropdown nav-item active">
+							<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Feedback
 								<b class="caret"></b>
 							</a>
 							<ul class="dropdown-menu agile_short_dropdown">
 								<li>
-									<a href="error.html">Error Page</a>
+									<a href="Add_feedback.aspx">Add Feedback</a>
 								</li>
 								<li>
-									<a href="single.html">Single Page</a>
+									<a href="Edit_delete_feedback.aspx">View</a>
 								</li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="projects.html">Projects</a>
-						</li>
-						<li class="nav-item active">
-							<a class="nav-link" href="contact.html">Contact</a>
+							<a class="nav-link" href="../logout.aspx">Logout</a>
 						</li>
 					</ul>
 				</div>
@@ -132,7 +136,7 @@
                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="*" ControlToValidate="txtrepswd" ForeColor="Red"></asp:RequiredFieldValidator>
                                   <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password Mismatch" ControlToCompare="txtpswd" ControlToValidate="txtrepswd" ForeColor="Red"></asp:CompareValidator> </div>
                             <div class="contact-fields-w3ls">  
-                                  <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+                                  <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" /><a href="login.aspx">Already Sign Up?</a>
                             </div>
                             </div>
 				    	</div>
