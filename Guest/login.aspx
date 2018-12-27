@@ -46,41 +46,27 @@
 
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					 <ul class="navbar-nav ml-auto">
-					    <li class="nav-item">
-							<a class="nav-link" href="guesthome.aspx">Home <span class="sr-only">(current)</span></a>
-						</li>
-                        <li class="nav-item">
-							<a class="nav-link" href="View_projects.aspx">Projects</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="view_cart.aspx">My Cart</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="add_orders.aspx">My Orders</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="view_bill.aspx">Bill</a>
-						</li>
-						
-                        <li class="dropdown nav-item active">
-							<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Feedback
-								<b class="caret"></b>
-							</a>
-							<ul class="dropdown-menu agile_short_dropdown">
-								<li>
-									<a href="Add_feedback.aspx">Add Feedback</a>
-								</li>
-								<li>
-									<a href="Edit_delete_feedback.aspx">View</a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="../logout.aspx">Logout</a>
-						</li>
-					</ul>
-				</div>
-			  
+					<li class="nav-item active">
+						<a class="nav-link" href="Index.aspx">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.aspx">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="services.html">Services</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="View_projects.aspx">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.aspx">Contact</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="login.aspx">Login</a>
+					</li>
+				</ul>
+				</div>			  
 			</nav>
 		</div>
 	</header>
@@ -107,7 +93,7 @@
                               <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtpswd" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
 							</div>
 							<div class="contact-fields-w3ls">
-                             <asp:Button ID="Button1" runat="server" Text="Sign In" class="btn btn-primary btn-send-message" OnClick="Button1_Click"  /><a href="login.aspx">New One?</a>
+                             <asp:Button ID="Button1" runat="server" Text="Sign In" class="btn btn-primary btn-send-message" OnClick="Button1_Click"  />&nbsp;&nbsp;<a href="register1.aspx"><b><i>New One?</i></b></a>
 							</div>
 						</div>
 					</div>
