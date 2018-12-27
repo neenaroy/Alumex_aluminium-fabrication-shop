@@ -72,4 +72,4 @@ public partial class Admin_add_stock : System.Web.UI.Page
         txtinvoice.Text = "";
         txtinvoicedate.Text = "";
     }
-}
+   }

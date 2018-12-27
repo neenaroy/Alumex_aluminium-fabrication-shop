@@ -37,7 +37,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <asp:Label ID="cat_descriptionLabel" runat="server" ForeColor="Black" Text='<%# Eval("cat_description") %>' />
+                                                <asp:Label ID="cat_descriptionLabel" runat="server" ForeColor="Black" Text='<%# Eval("cat_description") %>' Font-Bold="True" />
                                             </td>
                                             <td>&nbsp;</td>
                                         </tr>
