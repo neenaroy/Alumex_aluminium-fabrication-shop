@@ -42,8 +42,8 @@
                 Add category
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="add_sell.aspx">
-                Signout
+              <a class="dropdown-item" href="admin_view_category.aspx">
+               Update
               </a>
             </div>
           </li>

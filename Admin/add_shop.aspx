@@ -47,7 +47,7 @@
                 Add shop
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="add_sell.aspx">
+              <a class="dropdown-item" href="view_shop.aspx">
                Update
               </a>
             </div>

@@ -104,7 +104,7 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="add_employee.aspx">Add Employee</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Attendance</a></li>
+                <li class="nav-item"> <a class="nav-link" href="add_attendance.aspx">Attendance</a></li>
               </ul>
             </div>
           </li>
@@ -129,12 +129,17 @@
           </li>
            <li class="nav-item">
             <a class="nav-link" href="Manage_customer">
-              <span class="menu-title">Customer</span>
+              <span class="menu-title">Projects</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/tables/basic-table.html">
-              <span class="menu-title">Tables</span>
+              <span class="menu-title">Customer</span>
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="add_bill.aspx">
+              <span class="menu-title">Bill</span>
             </a>
           </li>
           <li class="nav-item">

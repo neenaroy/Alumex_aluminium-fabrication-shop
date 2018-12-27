@@ -69,7 +69,7 @@
 					</li>
 					
 					<li class="nav-item">
-						<a class="nav-link" href="View_projects.aspx">Projects</a>
+						<a class="nav-link" href="gallery.aspx">Gallery</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="contact.aspx">Contact</a>
@@ -276,9 +276,25 @@
 						<div class="col-md-6 contact_left_grid" data-aos="fade-right">
                             <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="4">
                                 <ItemTemplate>
-                                    <asp:Image ID="Image1" runat="server" Height="200px" Width="300px" ImageUrl='<%# Eval("project_image") %>' />
                                     <br />
-                                    <asp:Button ID="Button1" runat="server" CommandName="Are You Intrested?" Height="63px" OnClick="Button1_Click" Text="Are You Intrested?" Width="299px" />
+                                    <table class="w-100">
+                                        <tr>
+                                            <td>
+                                                <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl='<%# Eval("project_image") %>' Width="300px" />
+                                            </td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Button ID="Button1" runat="server" CommandName="Are You Intrested?" Height="58px" OnClick="Button1_Click" Text="Are You Intrested?" Width="295px" />
+                                            </td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </table>
                                     <br />
                                 </ItemTemplate>
                             </asp:DataList>
