@@ -35,8 +35,8 @@
                     </div>
                       <div class="form-group">
                           <label for="shopnames">Select category</label>
-                          <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="cat_name" DataValueField="cat_name" class="form-control form-control-sm"></asp:DropDownList>
-                          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [cat_name] FROM [category_tb]"></asp:SqlDataSource>
+                          <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="cat_name" DataValueField="cat_id" class="form-control form-control-sm"></asp:DropDownList>
+                          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [cat_name], [cat_id] FROM [category_tb]"></asp:SqlDataSource>
                      </div>
                       <div class="form-group">
                         <asp:FileUpload ID="FileUpload1" runat="server" />

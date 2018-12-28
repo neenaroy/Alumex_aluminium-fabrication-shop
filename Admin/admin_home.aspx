@@ -88,7 +88,7 @@
               <span class="menu-title">Dashboard</span>
               <i class="mdi mdi-home menu-icon"></i>
             </a>
-          </li>
+         
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-title">Employee</span>
@@ -97,7 +97,7 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="add_employee.aspx">Add Employee</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Attendance</a></li>
+                <li class="nav-item"> <a class="nav-link" href="add_attendance.aspx">Attendance</a></li>
               </ul>
             </div>
           </li>
@@ -121,21 +121,40 @@
             </a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="Manage_customer">
-              <span class="menu-title">Customer</span>
+            <a class="nav-link" href="add_projects_done.aspx">
+              <span class="menu-title">Projects</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/tables/basic-table.html">
-              <span class="menu-title">Tables</span>
+              <span class="menu-title">Customer</span>
+            </a>
+          </li>
+             <li class="nav-item">
+            <a class="nav-link" href="admin_view_orders.aspx">
+              <span class="menu-title">Orders</span>
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="add_bill.aspx">
+              <span class="menu-title">Bill</span>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="admin_view_feedbak.aspx">
+              <span class="menu-title">Feedback</span>
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="view_enquiry.aspx">
+              <span class="menu-title">Quick Enquiry</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="logout.aspx">
               <span class="menu-title">Logout</span>
                 <i class="mdi mdi-logout mr-2 text-primary"></i>
-             </li>
-          <li class="nav-item">
+          </li> <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
               <span class="menu-title">Sample Pages</span>
               <i class="menu-arrow"></i>

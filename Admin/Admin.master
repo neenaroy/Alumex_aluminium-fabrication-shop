@@ -128,7 +128,7 @@
             </a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="Manage_customer">
+            <a class="nav-link" href="add_projects_done.aspx">
               <span class="menu-title">Projects</span>
             </a>
           </li>
@@ -137,9 +137,24 @@
               <span class="menu-title">Customer</span>
             </a>
           </li>
+             <li class="nav-item">
+            <a class="nav-link" href="admin_view_orders.aspx">
+              <span class="menu-title">Orders</span>
+            </a>
+          </li>
             <li class="nav-item">
             <a class="nav-link" href="add_bill.aspx">
               <span class="menu-title">Bill</span>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="admin_view_feedbak.aspx">
+              <span class="menu-title">Feedback</span>
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="view_enquiry.aspx">
+              <span class="menu-title">Quick Enquiry</span>
             </a>
           </li>
           <li class="nav-item">

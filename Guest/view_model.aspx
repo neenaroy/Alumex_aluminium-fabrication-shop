@@ -57,62 +57,49 @@
     <br />
     &nbsp;<asp:DataList ID="DataList1" runat="server" DataKeyField="model_id" DataSourceID="SqlDataSource1" RepeatColumns="4" OnItemCommand="DataList1_ItemCommand" OnSelectedIndexChanged="DataList1_SelectedIndexChanged"  >
         <ItemTemplate>
-            &nbsp;<br />
-            <table class="w-100">
-                <tr>
-                    <td>Model ID: 
-                        <asp:Label ID="model_idLabel" runat="server" Font-Bold="false" Font-Size="20px"  ForeColor="#000066" Text='<%# Eval("model_id") %>' />
-                    </td>
-                    <td>
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>Name&nbsp; :
-                        <asp:Label ID="model_nameLabel" runat="server" Font-Bold="false" Font-Size="20px"  ForeColor="#000066" Text='<%# Eval("model_name") %>' />
-                    </td>
-                    <td>
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Image ID="Image1" runat="server" Height="200" Width="300" ImageUrl='<%# Eval("model_image") %>' />
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Button ID="Button1" runat="server" Text="Add To Cart" Height="71px" Width="297px" CommandName="addtocart" CommandArgument='<%# Eval("model_id") %>' />
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
+            model_id:
+            <asp:Label ID="model_idLabel" runat="server" Text='<%# Eval("model_id") %>' />
             <br />
+            model_name:
+            <asp:Label ID="model_nameLabel" runat="server" Text='<%# Eval("model_name") %>' />
             <br />
+            cat_id:
+            <asp:Label ID="cat_idLabel" runat="server" Text='<%# Eval("cat_id") %>' />
             <br />
+            model_image:
+            <asp:Label ID="model_imageLabel" runat="server" Text='<%# Eval("model_image") %>' />
+            <br />
+            <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("model_image") %>' />
+            <br />
+            <asp:Button ID="Button1" runat="server" CommandName="addtocart" OnClick="Button1_Click" Text="Add To Cart" />
             <br />
         </ItemTemplate>
     </asp:DataList>
+                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [model_id] FROM [model_tb] WHERE ([model_id] = @model_id)">
+                                <SelectParameters>
+                                    <asp:QueryStringParameter Name="model_id" QueryStringField="id" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
     <br />
-     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT * FROM [model_tb]"></asp:SqlDataSource>
+     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT * FROM [model_tb] WHERE ([model_id] = @model_id)">
+         <SelectParameters>
+             <asp:QueryStringParameter Name="model_id" QueryStringField="id" Type="Int32" />
+         </SelectParameters>
+                            </asp:SqlDataSource>
+                            <br />
+                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT * FROM [register_tb] WHERE ([mobile] = @mobile)">
+                                <SelectParameters>
+                                    <asp:SessionParameter Name="mobile" SessionField="username" Type="Decimal" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
     <br />
     <br />
     <br />
     <br />
-       <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT * FROM [model_tb] WHERE ([cat_name] = @cat_name)">
+       <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT * FROM [model_tb] WHERE (([cat_id] = @cat_id) AND ([cat_id] = @cat_id2))">
            <SelectParameters>
-               <asp:QueryStringParameter Name="cat_name" QueryStringField="category" Type="String" />
+               <asp:QueryStringParameter Name="cat_id" QueryStringField="category" Type="Int32" />
+               <asp:QueryStringParameter Name="cat_id2" QueryStringField="category" Type="Int32" />
            </SelectParameters>
     </asp:SqlDataSource>
                 </div>

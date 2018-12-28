@@ -52,7 +52,7 @@ public partial class Admin_add_stock : System.Web.UI.Page
         cmd1.Parameters.Add("@item_code", txtitemcode.Text);
         cmd1.Parameters.Add("@item_price",txtitemprice.Text );
         cmd1.Parameters.Add("@quantity", txtqnty.Text);
-        cmd1.Parameters.Add("@shop_name" , DropDownList1.Text);
+        cmd1.Parameters.Add("@shop_id" ,DropDownList1.SelectedValue.ToString());
         cmd1.Parameters.Add("@supply_place", txtsupply.Text);
         cmd1.Parameters.Add("@invoice_number", txtinvoice.Text);
         cmd1.Parameters.Add("@invoice_date", txtinvoicedate.Text);

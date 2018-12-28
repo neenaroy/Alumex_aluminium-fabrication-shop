@@ -38,8 +38,8 @@
                       </div>
                       <div class="form-group">
                           <label for="shopnames">Shop Name</label>
-                          <asp:DropDownList ID="DropDownList1" runat="server" class="form-control form-control-sm" DataSourceID="SqlDataSource1" DataTextField="shop_name" DataValueField="shop_name"></asp:DropDownList>
-                          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [shop_name] FROM [shop_tb]"></asp:SqlDataSource>
+                          <asp:DropDownList ID="DropDownList1" runat="server" class="form-control form-control-sm" DataSourceID="SqlDataSource1" DataTextField="shop_name" DataValueField="shop_id"></asp:DropDownList>
+                          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [shop_name], [shop_id] FROM [shop_tb]"></asp:SqlDataSource>
                       </div>
                      <div class="form-group">
                       <asp:TextBox ID="txtsupply" runat="server" CausesValidation="True" class="form-control" placeholder="Place of Supply"></asp:TextBox>

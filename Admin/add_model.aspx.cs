@@ -74,7 +74,8 @@ public partial class Admin_add_model : System.Web.UI.Page
         cmd1.Parameters.Add("@flag", 0);
         cmd1.Parameters.Add("@model_id", get_id());
         cmd1.Parameters.Add("@model_name", txtmodname.Text);
-        cmd1.Parameters.Add("@cat_name",DropDownList1.Text);
+        cmd1.Parameters.Add("@cat_id",DropDownList1.SelectedValue.ToString());
+       // cmd1.Parameters.Add("@cat_name",DropDownList1.Text);
         cmd1.Parameters.Add("@model_image", ViewState["filepath"].ToString());
         SqlCommand cmd2 = new SqlCommand("spmodel", obj.con);
         cmd2.CommandType = CommandType.StoredProcedure;
