@@ -2,17 +2,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-        .auto-style5 {
-            width: 100%;
-            background-color: #9999FF;
-        }
-        .auto-style6 {
-            width: 110px;
+        .auto-style7 {
+            width: 175%;
+            height: 0;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-  <section class="contact py-5">
+    <section class="contact py-5">
 	<div class="container">
 		<h2 class="heading text-capitalize mb-sm-5 mb-4">Purchase Now.... </h2>
 			<div class="mail_grid_w3l">
@@ -23,34 +20,67 @@
     &nbsp;&nbsp;&nbsp;&nbsp;
     <br />
     <br />
+                            <table align="center" class="auto-style7">
+                                <tr>
+                                    <td style="text-align: center">
+               <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" Font-Bold="True" ForeColor="#000099"  Font-Size="20px">Kitchen remodeling</asp:LinkButton>
+                                    </td>
+                                    <td style="text-align: center">
+                                        &nbsp;</td>
+                                    <td style="text-align: center">
+              <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" Font-Bold="True" Font-Size="20px" ForeColor="#0000cc">Window</asp:LinkButton>
+                                    </td>
+                                     <td style="text-align: center">
+                                         &nbsp;</td>
+                                    <td style="text-align: center">
+                 <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click" Font-Bold="True" Font-Size="20px" ForeColor="#000099">Roof Top</asp:LinkButton>
+                                    </td>
+                                     <td style="text-align: center">
+                                         &nbsp;</td>
+                                    <td style="text-align: center">
+                  <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Font-Bold="True" Font-Size="20px" ForeColor="#0000cc">Staircases</asp:LinkButton>
+                                    </td>
+                                     <td style="text-align: center">
+                                         &nbsp;</td>
+                                    <td style="text-align: center">
+                   <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click" Font-Bold="True" Font-Size="20px" ForeColor="#000099">Doors &amp; Curtains</asp:LinkButton>
+                                    </td>
+                                     <td style="text-align: center">
+                                         &nbsp;</td>
+                                    <td style="text-align: center">
+                  <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click" Font-Bold="True" ForeColor="#0000cc">View All</asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
     <br />
     <br />
-         <table class="auto-style5">
-           <tr>
-            <td>
-               <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" Font-Bold="True">Kitchen remodeling</asp:LinkButton>
-           </td>
-            <td class="auto-style6">
-              <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" Font-Bold="True">Window</asp:LinkButton>
-             </td>
-              <td>
-                 <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click" Font-Bold="True">Roof Top</asp:LinkButton>
-              </td>
-               <td>
-                  <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Font-Bold="True">Staircases</asp:LinkButton>
-               </td>
-               <td>
-                   <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click" Font-Bold="True">Doors &amp; Curtains</asp:LinkButton>
-                </td>
-                <td>
-                  <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click" Font-Bold="True">View All</asp:LinkButton>
-                </td>
-              </tr>
-           </table>                        
     <br />
-    &nbsp;<asp:DataList ID="DataList1" runat="server" DataKeyField="model_id" DataSourceID="SqlDataSource1" RepeatColumns="4" >
+    &nbsp;<asp:DataList ID="DataList1" runat="server" DataKeyField="model_id" DataSourceID="SqlDataSource1" RepeatColumns="4" OnItemCommand="DataList1_ItemCommand" OnSelectedIndexChanged="DataList1_SelectedIndexChanged"  >
         <ItemTemplate>
+            &nbsp;<br />
             <table class="w-100">
+                <tr>
+                    <td>Model ID: 
+                        <asp:Label ID="model_idLabel" runat="server" Font-Bold="false" Font-Size="20px"  ForeColor="#000066" Text='<%# Eval("model_id") %>' />
+                    </td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Name&nbsp; :
+                        <asp:Label ID="model_nameLabel" runat="server" Font-Bold="false" Font-Size="20px"  ForeColor="#000066" Text='<%# Eval("model_name") %>' />
+                    </td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
                 <tr>
                     <td>
                         <asp:Image ID="Image1" runat="server" Height="200" Width="300" ImageUrl='<%# Eval("model_image") %>' />
@@ -63,11 +93,13 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Add To Cart" Width="236px"  OnClick="Button1_Click" />
+                        <asp:Button ID="Button1" runat="server" Text="Add To Cart" Height="71px" Width="297px" CommandName="addtocart" CommandArgument='<%# Eval("model_id") %>' />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
+            <br />
+            <br />
             <br />
             <br />
         </ItemTemplate>

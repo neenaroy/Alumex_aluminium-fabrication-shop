@@ -48,4 +48,16 @@ public partial class Guest_view_model : System.Web.UI.Page
     {
         Response.Redirect("add_to_cart.aspx");
     }
+    protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
+    {
+        if (e.CommandName == "addtocart")
+        {
+            Response.Redirect("add_to_cart.aspx?id=" + e.CommandArgument.ToString());
+
+        }
+    }
+    protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+      //  Response.Redirect("add_to_cart.aspx?id=" + DataList1.SelectedRow.Cells[0].Text);
+    }
 }
