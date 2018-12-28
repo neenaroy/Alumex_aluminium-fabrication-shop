@@ -5,113 +5,71 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using System.Data.SqlClient;
-using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Markup;
+using System.Net;
+using System.Web.UI.HtmlControls;
 using System.Configuration;
+using System.Text;
 
 public partial class Guest_add_to_cart : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+
+  
+        Panel1.Controls.Add(new LiteralControl("<table style=width:100%>"));
+        Panel1.Controls.Add(new LiteralControl("<tr>"));
+        Class1 obj = new Class1();
+        obj.getconnection();
+        SqlCommand cmd1 = new SqlCommand("sp_addfood", obj.con);
+        cmd1.CommandType = CommandType.StoredProcedure;
+        cmd1.Parameters.Add("@flag", 4);
+        cmd1.Parameters.Add("@food_id",Request.QueryString["id"].ToString());
+        DataTable dt = new DataTable();
+        SqlDataAdapter dtadt = new SqlDataAdapter(cmd1);
+        dtadt.Fill(dt);
+      if( dt.Rows.Count>0)
         {
-            DataTable dt = new DataTable();
-            DataRow dr;
-            dt.Columns.Add("sno");
-            dt.Columns.Add("modelid");
-            dt.Columns.Add("modelname");
-            dt.Columns.Add("modelimage");
-            dt.Columns.Add("cost");
-            dt.Columns.Add("totalcost");
 
-            if (Request.QueryString["id"] != null)
-            {
-                if (Session["Buyitems"] == null)
-                {
-                    Class1 obj = new Class1();
-                    obj.getconnect();
-                    SqlCommand cmd= new SqlCommand("spmodel", obj.con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@flag", 4);
-                    cmd.Parameters.Add("@model_id", Request.QueryString["id"].ToString());
-                    dr = dt.NewRow();
-                   // Class1 obj = new Class1();
-                  //  obj.getconnect();
-                   // String filename = Path.Combine(Server.MapPath("~/Admin/images/"), FileUpload1.FileName);
-                   // SqlCommand cmd = new SqlCommand("spcategory", obj.con);
-                   // cmd.CommandType = CommandType.StoredProcedure;
-                  //  String mycon = "Data Source=NEENA\\SQLEXPRESS;Initial Catalog=alumex;Integrated Security=True";
-                  //  SqlConnection scon = new SqlConnection(mycon);
-                  //  String myquery = "select * from  where modelid=" + Request.QueryString["id"];
-                 // SqlCommand cmd = new SqlCommand();
-                 
-                  //  cmd.CommandText = myquery;
-                 //   cmd.Connection = scon;
-                  //  DataTable dt = new DataTable();
-                  //  SqlDataAdapter adt = new SqlDataAdapter(cmd2);
-                  //  adt.Fill(dt);
-
-
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    da.SelectCommand = cmd;
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
-                    dr["sno"] = 1;
-                    dr["modelid"] = ds.Tables[0].Rows[0]["model_id"].ToString();
-                    dr["modelname"] = ds.Tables[0].Rows[0]["model_name"].ToString();
-                    dr["modelimage"] = ds.Tables[0].Rows[0]["model_image"].ToString();
-                    dt.Rows.Add(dr);
-                    GridView1.DataSource = dt;
-                    GridView1.DataBind();
-                    Session["buyitems"] = dt;
-                }
-                else
-                {
-
-                    dt = (DataTable)Session["buyitems"];
-                    int sr;
-                    sr = dt.Rows.Count;
-
-                    dr = dt.NewRow();
-                    Class1 obj = new Class1();
-                    obj.getconnect();
-                    SqlCommand cmd = new SqlCommand("spmodel", obj.con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@flag", 4);
-                    cmd.Parameters.Add("@model_id", Request.QueryString["id"].ToString());
-                    dr = dt.NewRow();
-                   // String mycon = "Data Source=HP-PC\\SQLEXPRESS;Initial Catalog=haritiShopping;Integrated Security=True";
-                   // SqlConnection scon = new SqlConnection(mycon);
-                  //  String myquery = "select * from model_tb where modelid=" + Request.QueryString["id"];
-                   // SqlCommand cmd = new SqlCommand();
-                  //  cmd.CommandText = myquery;
-                  //  cmd.Connection = scon;
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    da.SelectCommand = cmd;
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
-                    dr["sno"] = sr + 1;
-                    dr["modelid"] = ds.Tables[0].Rows[0]["model_id"].ToString();
-                    dr["modelname"] = ds.Tables[0].Rows[0]["model_name"].ToString();
-                    dr["modelimage"] = ds.Tables[0].Rows[0]["model_image"].ToString();
-                   // dr["price"] = ds.Tables[0].Rows[0]["price"].ToString();
-                    dt.Rows.Add(dr);
-                    GridView1.DataSource = dt;
-                    GridView1.DataBind();
-                    Session["buyitems"] = dt;
-
-                }
-            }
-            else
-            {
-                dt = (DataTable)Session["buyitems"];
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
-
-            }
-
-        }
+            HtmlImage img = new HtmlImage();
+            img.Attributes.Add("class", "");
+            img.Style.Add(HtmlTextWriterStyle.Display, "block");
+            img.Style.Add(HtmlTextWriterStyle.Height, "166px");
+            img.Style.Add(HtmlTextWriterStyle.Width, "278px");
+            img.Src = dt.Rows[0][2].ToString();
+            Panel1.Controls.Add(new LiteralControl("<table runat=server>"));
+            Panel1.Controls.Add(new LiteralControl("<tr><td>"));
+            Panel1.Controls.Add(img);
+            Panel1.Controls.Add(new LiteralControl("</td></tr>"));
+            Panel1.Controls.Add(new LiteralControl("<tr><td>Food Name</td><td>" + dt.Rows[0][1].ToString()));
+            Panel1.Controls.Add(new LiteralControl("</td></tr>"));
+            Panel1.Controls.Add( new LiteralControl("<tr><td> Food Description</td><td>"+ dt.Rows[0][3].ToString()));
+            Panel1.Controls.Add(new LiteralControl("</td></tr>"));
+            Panel1.Controls.Add(new LiteralControl("<tr><td>Food Cost</td><td>" + dt.Rows[0][4].ToString()));
+            Panel1.Controls.Add(new LiteralControl("</td></tr>"));
+            Panel1.Controls.Add(new LiteralControl("</table>"));
+            ViewState["qty"] = dt.Rows[0][5].ToString();
+            ViewState["amt"] = dt.Rows[0][4].ToString();
+}
     }
-   
+        protected void buynow_Click(object sender, EventArgs e)
+{
+             Class1 obj = new Class1();
+        obj.getconnection();
+        SqlCommand cmd1 = new SqlCommand("sp_booking", obj.con);
+        cmd1.CommandType = CommandType.StoredProcedure;
+        cmd1.Parameters.Add("@flag", 1);
+        cmd1.Parameters.Add("@username",Session["username"].ToString() );
+        cmd1.Parameters.Add("@food_id",Request.QueryString["id"].ToString());
+        cmd1.Parameters.Add("@foodquantity", txtquantity.Text);
+        cmd1.Parameters.Add("@status", 0);
+        cmd1.Parameters.Add("@delivery", "not delivered");
+        cmd1.ExecuteNonQuery();
+        update_qty();
+        Response.Write("<script>alert('Booking Successful')</script>");
+        txtquantity.Text = "";
+        lbltamt.Text = "";
 
+}
 }

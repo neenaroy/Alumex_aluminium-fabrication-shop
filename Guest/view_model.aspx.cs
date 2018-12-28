@@ -4,6 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
+using System.Drawing;
+using System.Windows.Markup;
+using System.Net;
+using System.Web.UI.HtmlControls;
+using System.Configuration;
+using System.Text;
+
 
 public partial class Guest_view_model : System.Web.UI.Page
 {
@@ -46,7 +55,21 @@ public partial class Guest_view_model : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Response.Redirect("add_to_cart.aspx");
+      Response.Redirect("add_to_cart.aspx");
+       /* Class1 obj = new Class1();
+        obj.getconnection();
+        SqlCommand cmd1 = new SqlCommand("sp_booking", obj.con);
+        cmd1.CommandType = CommandType.StoredProcedure;
+        cmd1.Parameters.Add("@flag", 1);
+        cmd1.Parameters.Add("@username", Session["username"].ToString());
+        cmd1.Parameters.Add("@food_id", Request.QueryString["id"].ToString());
+       // cmd1.Parameters.Add("@foodquantity", txtquantity.Text);
+        cmd1.Parameters.Add("@status", 1);
+        cmd1.Parameters.Add("@delivery", "not delivered");
+        cmd1.ExecuteNonQuery();
+        Response.Write("<script>alert('Added to Your Wishlist')</script>");
+      //  txtquantity.Text = "";
+       // lbltamt.Text = "";*/
     }
     protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
     {
