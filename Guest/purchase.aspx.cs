@@ -59,18 +59,41 @@ public partial class Guest_purchase : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-       // if (Request.QueryString["id"] == null)
-      //  {
-            DataList1.DataSourceID = null;
-            DataList1.DataSource = SqlDataSource4;
-            DataList1.DataBind();
+       
+         //   DataList1.DataSourceID = null;
+         //   DataList1.DataSource = SqlDataSource4;
+         //   DataList1.DataBind();
 
             Class1 obj = new Class1();
             obj.getconnect();
-            SqlCommand cmd2 = new SqlCommand("spmodel", obj.con);
-            cmd2.CommandType = CommandType.StoredProcedure;
-            cmd2.Parameters.Add("@flag", 4);
-            DataTable dt = new DataTable();
+            if (Request.QueryString["id"] == null)
+            {
+                SqlCommand cmd2 = new SqlCommand("spmodel", obj.con);
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.Parameters.Add("@flag", 1);
+                cmd2.ExecuteNonQuery();
+            }
+            else
+            {
+                SqlCommand cmd3 = new SqlCommand("spmodel", obj.con);
+                cmd3.CommandType = CommandType.StoredProcedure;
+                cmd3.Parameters.Add("@flag", 4);
+                cmd3.ExecuteNonQuery();
+
+                SqlCommand cmd1 = new SqlCommand("spcart", obj.con);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.Parameters.Add("@flag", 0);
+                cmd1.Parameters.Add("@mobile", Session["username"].ToString());
+                cmd1.Parameters.Add("@model_id", Request.QueryString["id"].ToString());
+                //    cmd1.Parameters.Add("@model_id", dt.Rows[0][1].ToString());
+
+                cmd1.Parameters.Add("@status", 1);
+                cmd1.Parameters.Add("@delivery", "not delivered");
+
+                cmd1.ExecuteNonQuery();
+                Response.Write("<script>alert('Added to Your Wishlist')</script>");
+            }
+          /*  DataTable dt = new DataTable();
             SqlDataAdapter adt = new SqlDataAdapter(cmd2);
             adt.Fill(dt);
             if (dt.Rows.Count > 0)
@@ -78,25 +101,13 @@ public partial class Guest_purchase : System.Web.UI.Page
 
                 Response.Redirect("purchase.aspx?id=" + dt.Rows[0][1].ToString());
 
-            }
+            }*/
             //throw new NotImplementedException();
             //   if (Request.QueryString["id"] != null)
             //  {
             //     for (int i = 0; i)
             //     {
-            SqlCommand cmd1 = new SqlCommand("spcart", obj.con);
-            cmd1.CommandType = CommandType.StoredProcedure;
-            cmd1.Parameters.Add("@flag", 0);
-            cmd1.Parameters.Add("@mobile", Session["username"].ToString());
-            cmd1.Parameters.Add("@model_id", Request.QueryString["id"].ToString());
-            //    cmd1.Parameters.Add("@model_id", dt.Rows[0][1].ToString());
-
-            cmd1.Parameters.Add("@status", 1);
-            cmd1.Parameters.Add("@delivery", "not delivered");
-            cmd2.ExecuteNonQuery();
-
-            cmd1.ExecuteNonQuery();
-            Response.Write("<script>alert('Added to Your Wishlist')</script>");
+           
             // }
      //   }
     }

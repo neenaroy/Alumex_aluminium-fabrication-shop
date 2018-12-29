@@ -48,8 +48,7 @@ public partial class Admin_add_stock : System.Web.UI.Page
         cmd1.CommandType = CommandType.StoredProcedure;
         cmd1.Parameters.Add("@flag",0);
         cmd1.Parameters.Add("@stock_id",get_id());
-        cmd1.Parameters.Add("@item_name",txtitemname.Text);
-        cmd1.Parameters.Add("@item_code", txtitemcode.Text);
+        cmd1.Parameters.Add("@item_code", DropDownList2.SelectedValue.ToString());
         cmd1.Parameters.Add("@item_price",txtitemprice.Text );
         cmd1.Parameters.Add("@quantity", txtqnty.Text);
         cmd1.Parameters.Add("@shop_id" ,DropDownList1.SelectedValue.ToString());
@@ -64,12 +63,10 @@ public partial class Admin_add_stock : System.Web.UI.Page
     }
     protected void clear()
     {
-        txtitemname.Text = "";
-        txtitemcode.Text = "";
         txtitemprice.Text = "";
         txtqnty.Text = "";
         txtsupply.Text = "";
         txtinvoice.Text = "";
         txtinvoicedate.Text = "";
     }
-   }
+}
