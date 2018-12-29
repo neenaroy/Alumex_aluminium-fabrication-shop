@@ -40,7 +40,7 @@
 		<div class="container agile-banner_nav">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				
-				<h1><a class="navbar-brand" href="index.html">Alumex<span class="display"></span></a></h1>
+				<h1><a class="navbar-brand" href="Index.aspx">Alumex<span class="display"></span></a></h1>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -115,16 +115,17 @@
                             <div class="contact-fields-w3ls">
                                   <asp:TextBox ID="txtrepswd" runat="server" class="form-control" placeholder="Retype Password"></asp:TextBox>
                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="*" ControlToValidate="txtrepswd" ForeColor="Red"></asp:RequiredFieldValidator>
-                                  <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password Mismatch" ControlToCompare="txtpswd" ControlToValidate="txtrepswd" ForeColor="Red"></asp:CompareValidator> </div>
+                                  <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password Mismatch" ControlToCompare="txtpswd" ControlToValidate="txtrepswd" ForeColor="Red"></asp:CompareValidator> 
+                                  <br />
+                                  <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" Width="197px" />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="login.aspx"><b><i>Already Sign Up?</i></b></a>
+                            </div>
                            </div>
                              <div class="contact-fields-w3ls">  
-                                  <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />&nbsp;<a href="login.aspx"><b><i>Already Sign Up?</i></b></a>
                             </div>
-                            
+                           </div>  
 				    	</div>
                      </form>
                  </div>
-		</div>
 </section>
 <!-- js-scripts -->		
 

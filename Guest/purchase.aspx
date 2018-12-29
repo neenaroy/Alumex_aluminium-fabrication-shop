@@ -11,7 +11,7 @@
         <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">View All</asp:LinkButton>
 
 
-    <asp:DataList ID="DataList1" runat="server" DataKeyField="model_id" DataSourceID="SqlDataSource1" RepeatColumns="4" OnItemCommand="DataList1_ItemCommand">
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="model_id" DataSourceID="SqlDataSource1" RepeatColumns="4" OnItemCommand="DataList1_ItemCommand" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
         <ItemTemplate>
             model_id:
             <asp:Label ID="model_idLabel" runat="server" Text='<%# Eval("model_id") %>' />
