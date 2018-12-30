@@ -87,19 +87,16 @@
             <a class="nav-link" href="admin_home.aspx">
               <span class="menu-title">Dashboard</span>
               <i class="mdi mdi-home menu-icon"></i>
-            </a>
-         
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            </a>          
+            <li class="nav-item">
+            <a class="nav-link" href="add_employee.aspx">
               <span class="menu-title">Employee</span>
-              <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="add_employee.aspx">Add Employee</a></li>
-                <li class="nav-item"> <a class="nav-link" href="add_attendance.aspx">Attendance</a></li>
-              </ul>
-            </div>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="add_item.aspx">
+              <span class="menu-title">Item</span>
+            </a>
           </li>
          <li class="nav-item">
             <a class="nav-link" href="add_stock.aspx">
@@ -156,17 +153,14 @@
                 <i class="mdi mdi-logout mr-2 text-primary"></i>
           </li> <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-              <span class="menu-title">Sample Pages</span>
+              <span class="menu-title">General Pages</span>
               <i class="menu-arrow"></i>
               <i class="mdi mdi-medical-bag menu-icon"></i>
             </a>
             <div class="collapse" id="general-pages">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="admin_home.aspx">Home </a></li>
+                
               </ul>
               </div>
           </li>

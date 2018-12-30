@@ -16,8 +16,8 @@
             model_id:
             <asp:Label ID="model_idLabel" runat="server" Text='<%# Eval("model_id") %>' />
             <br />
-            model_name:
-            <asp:Label ID="model_nameLabel" runat="server" Text='<%# Eval("model_name") %>' />
+            Item Code:
+            <asp:Label ID="model_nameLabel" runat="server" Text='<%# Eval("item_code") %>' />
             <br />
             cat_id:
             <asp:Label ID="cat_idLabel" runat="server" Text='<%# Eval("cat_id") %>' />
@@ -38,11 +38,6 @@
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT * FROM [register_tb] WHERE ([mobile] = @mobile)">
         <SelectParameters>
             <asp:QueryStringParameter Name="mobile" QueryStringField="username" Type="Decimal" />
-        </SelectParameters>
-    </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT * FROM [model_tb] WHERE ([model_id] = @model_id)">
-        <SelectParameters>
-            <asp:QueryStringParameter Name="model_id" QueryStringField="id" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
 </asp:Content>

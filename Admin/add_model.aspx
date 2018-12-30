@@ -7,16 +7,16 @@
           <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                  <div class="nav-profile-text">
-                      <p class="mb-1 text-black">Category</p>
+                      <p class="mb-1 text-black">Model</p>
                   </div>
               </a>
             <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="add_category.aspx">
-                Add category
+              <a class="dropdown-item" href="add_model.aspx">
+                Add Model
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="add_sell.aspx">
-                Signout
+              <a class="dropdown-item" href="view_model.aspx">
+               View Model
               </a>
             </div>
           </li>
@@ -29,10 +29,10 @@
                   <h4 class="card-title">Add Model</h4>
                   <form class="forms-sample">
                     <div class="form-group">
-                        <asp:TextBox ID="txtmodname" runat="server" CausesValidation="True" class="form-control" placeholder="Model Name"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtmodname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="txtmodname" ErrorMessage="Enter a valid name" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
-                    </div>
+                        <label for="shopnames">Select Item</label>
+                        <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="item_name" DataValueField="item_code" class="form-control form-control-sm"></asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [item_name], [item_code] FROM [item_tb]"></asp:SqlDataSource>
+                        </div>
                       <div class="form-group">
                           <label for="shopnames">Select category</label>
                           <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="cat_name" DataValueField="cat_id" class="form-control form-control-sm"></asp:DropDownList>

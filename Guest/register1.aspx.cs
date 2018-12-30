@@ -15,10 +15,7 @@ public partial class Guest_register1 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["username"].ToString() == "")
-        {
-            Response.Redirect("~/Guest/login.aspx");
-        }
+        
     }
     protected int get_id()
     {

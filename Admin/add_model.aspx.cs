@@ -73,31 +73,11 @@ public partial class Admin_add_model : System.Web.UI.Page
         cmd1.CommandType = CommandType.StoredProcedure;
         cmd1.Parameters.Add("@flag", 0);
         cmd1.Parameters.Add("@model_id", get_id());
-        cmd1.Parameters.Add("@model_name", txtmodname.Text);
+        cmd1.Parameters.Add("@item_code", DropDownList2.SelectedValue.ToString());
         cmd1.Parameters.Add("@cat_id",DropDownList1.SelectedValue.ToString());
         cmd1.Parameters.Add("@model_image", ViewState["filepath"].ToString());
-        SqlCommand cmd2 = new SqlCommand("spmodel", obj.con);
-        cmd2.CommandType = CommandType.StoredProcedure;
-        cmd2.Parameters.Add("@flag", 3);
-        cmd2.Parameters.Add("@model_name", txtmodname.Text);
-        DataTable dt = new DataTable();
-        SqlDataAdapter adt = new SqlDataAdapter(cmd2);
-        adt.Fill(dt);
-        if (dt.Rows.Count > 0)
-          {
-              Response.Write("<script>alert('Model already exist')</script>");
-
-          }
-        else
-          {
-             cmd1.ExecuteNonQuery();
-             obj.closeconnect();
-             Response.Write("<script>alert('Model added succesfully')</script>");
-            clear();
-          }      
-    }
-    protected void clear()
-    {
-        txtmodname.Text = "";
+        cmd1.ExecuteNonQuery();
+        obj.closeconnect();
+        Response.Write("<script>alert('Model added succesfully')</script>");    
     }
 }

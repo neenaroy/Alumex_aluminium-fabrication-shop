@@ -66,7 +66,7 @@ public partial class Guest_purchase : System.Web.UI.Page
 
             Class1 obj = new Class1();
             obj.getconnect();
-            if (Request.QueryString["id"] == null)
+          /*  if (Request.QueryString["id"] == null)
             {
                 SqlCommand cmd2 = new SqlCommand("spmodel", obj.con);
                 cmd2.CommandType = CommandType.StoredProcedure;
@@ -74,7 +74,7 @@ public partial class Guest_purchase : System.Web.UI.Page
                 cmd2.ExecuteNonQuery();
             }
             else
-            {
+            {*/
                 SqlCommand cmd3 = new SqlCommand("spmodel", obj.con);
                 cmd3.CommandType = CommandType.StoredProcedure;
                 cmd3.Parameters.Add("@flag", 4);
@@ -84,7 +84,7 @@ public partial class Guest_purchase : System.Web.UI.Page
                 cmd1.CommandType = CommandType.StoredProcedure;
                 cmd1.Parameters.Add("@flag", 0);
                 cmd1.Parameters.Add("@mobile", Session["username"].ToString());
-                cmd1.Parameters.Add("@model_id", Request.QueryString["id"].ToString());
+                cmd1.Parameters.Add("@item_code", Request.QueryString["id"].ToString());
                 //    cmd1.Parameters.Add("@model_id", dt.Rows[0][1].ToString());
 
                 cmd1.Parameters.Add("@status", 1);
@@ -92,7 +92,7 @@ public partial class Guest_purchase : System.Web.UI.Page
 
                 cmd1.ExecuteNonQuery();
                 Response.Write("<script>alert('Added to Your Wishlist')</script>");
-            }
+          //  }
           /*  DataTable dt = new DataTable();
             SqlDataAdapter adt = new SqlDataAdapter(cmd2);
             adt.Fill(dt);
