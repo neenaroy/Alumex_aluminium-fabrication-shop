@@ -10,7 +10,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class Guest_add_to_cart : System.Web.UI.Page
+public partial class Guest_booking : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -20,7 +20,7 @@ public partial class Guest_add_to_cart : System.Web.UI.Page
     {
         Class1 obj = new Class1();
         obj.getconnect();
-        SqlCommand cmd1 = new SqlCommand("spcart", obj.con);
+        SqlCommand cmd1 = new SqlCommand("spbooking", obj.con);
         cmd1.CommandType = CommandType.StoredProcedure;
         cmd1.Parameters.Add("@flag", 0);
         cmd1.Parameters.Add("@mobile", Session["username"].ToString());
@@ -29,13 +29,14 @@ public partial class Guest_add_to_cart : System.Web.UI.Page
         cmd1.Parameters.Add("@status", 0);
         cmd1.Parameters.Add("@delivery", "not delivered");
         cmd1.ExecuteNonQuery();
+        Response.Redirect("user_purchase.aspx");
         Response.Write("<script>alert('Added to Your Wishlist')</script>");
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
         Class1 obj = new Class1();
         obj.getconnect();
-        SqlCommand cmd1 = new SqlCommand("spcart", obj.con);
+        SqlCommand cmd1 = new SqlCommand("spbooking", obj.con);
         cmd1.CommandType = CommandType.StoredProcedure;
         cmd1.Parameters.Add("@flag", 0);
         cmd1.Parameters.Add("@mobile", Session["username"].ToString());
@@ -44,6 +45,8 @@ public partial class Guest_add_to_cart : System.Web.UI.Page
         cmd1.Parameters.Add("@status", 1);
         cmd1.Parameters.Add("@delivery", "not delivered");
         cmd1.ExecuteNonQuery();
+        Response.Redirect("user_purchase.aspx");
         Response.Write("<script>alert('Order placed sucessfully')</script>");
+       
     }
 }

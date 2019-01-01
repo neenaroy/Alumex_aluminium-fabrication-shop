@@ -3,6 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <section class="contact py-5">
+	<div class="container">
+		<h2 class="heading text-capitalize mb-sm-5 mb-4">Purchase Now...</h2>
+			<div class="mail_grid_w3l">
     <asp:DataList ID="DataList1" runat="server" DataKeyField="model_id" DataSourceID="SqlDataSource1" RepeatColumns="4">
         <ItemTemplate>
             <table class="w-100">
@@ -27,7 +31,7 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td><a href='add_to_cart.aspx?id=<%# Eval("cat_id") %>&amp;model=<%# Eval("model_id") %>&amp;item=<%# Eval("item_code") %>'>Intrested?</a></td>
+                    <td><a href='booking.aspx?id=<%# Eval("cat_id") %>&amp;model=<%# Eval("model_id") %>&amp;item=<%# Eval("item_code") %>'>Intrested?</a></td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -43,5 +47,8 @@
             <asp:QueryStringParameter Name="cat_id" QueryStringField="id" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
+                </div>
+        </div>
+        </section>
 </asp:Content>
 
