@@ -14,11 +14,18 @@ public partial class Admin_add_attendance : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        HttpContext.Current.Response.Cache.SetExpires(DateTime.UtcNow.AddDays(-1));
+        HttpContext.Current.Response.Cache.SetValidUntilExpires(false);
+        HttpContext.Current.Response.Cache.SetRevalidation(HttpCacheRevalidation.AllCaches);
+        HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+        HttpContext.Current.Response.Cache.SetNoStore();
+        if (Session["username"].ToString() == "")
+        {
+            Response.Redirect("~/Guest/login.aspx");
+        }
     }
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        Response.Redirect("");
     }
     protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
     {
@@ -37,17 +44,35 @@ public partial class Admin_add_attendance : System.Web.UI.Page
             dataInsert(lblFname.Text, lblFaName.Text, ddl_att.SelectedValue);
 
         }*/
-        Class1 obj = new Class1();
-        obj.getconnect();
-        SqlCommand cmd1 = new SqlCommand("spattendance", obj.con);
-        cmd1.CommandType = CommandType.StoredProcedure;
-        cmd1.Parameters.Add("@flag",5);
-         cmd1.Parameters.Add("@att_date",txtdoa.Text);
+        foreach (GridViewRow row in GridView1.Rows)
+        {
+            CheckBox status = (row.Cells[3].FindControl("CheckBox1") as CheckBox);
+            int rollno = Convert.ToInt32(row.Cells[1].Text);
+         /*   if (status.Checked)
+            {
+                updaterow(emp_id, "true");
+            }
+            else
+            {
+                updaterow(emp_id, "false");
+
+            }*/
+
+
+
+        }
+
+     //   Class1 obj = new Class1();
+     //   obj.getconnect();
+    //    SqlCommand cmd1 = new SqlCommand("spattendance", obj.con);
+    //    cmd1.CommandType = CommandType.StoredProcedure;
+   //     cmd1.Parameters.Add("@flag",5);
+    //     cmd1.Parameters.Add("@att_date",txtdoa.Text);
       //   cmd1.Parameters.Add("@emp_fname", txtfname.Text);
 
   //cmd1.Parameters.Add("@emp_mobile", txtmobile.Text);
 
-  cmd1.ExecuteNonQuery();
+ // cmd1.ExecuteNonQuery();
 //  cmd1.Parameters.Add("@att_status",);
 /*  cmd1.Parameters.Add("@emp_lname", txtlname.Text);
   cmd1.Parameters.Add("@emp_house", txthousename.Text);
@@ -76,4 +101,22 @@ public partial class Admin_add_attendance : System.Web.UI.Page
            
 }*/
     }
+    private void updaterow(int emp_id, String markstatus)
+    {
+        Class1 obj = new Class1();
+        obj.getconnect();
+       // SqlCommand cmd1 = new SqlCommand("spattendance", obj.con);
+      //  String mycon = "Data Source=HP-PC\\SQLEXPRESS; Initial Catalog=StudentAttendance; Integrated Security=True";
+        SqlCommand cmd1 = new SqlCommand("spattendance", obj.con);
+        cmd1.CommandType = CommandType.StoredProcedure;
+        cmd1.Parameters.Add("@flag", 5);
+     //   String updatedata = "Update attendancedetail set attendancemark='" + markstatus + "' where rollno=" + rollno;
+      //  SqlConnection con = new SqlConnection(mycon);
+     //   con.Open();
+      //  SqlCommand cmd = new SqlCommand();
+      //  cmd.CommandText = updatedata;
+     //   cmd.Connection = con;
+        cmd1.ExecuteNonQuery();
+       // Label2.Text = "Data Has Been Saved Successfully";
+    } 
 }

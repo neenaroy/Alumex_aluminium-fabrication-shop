@@ -7,16 +7,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="form-group">
-                      <asp:TextBox ID="txtdoa" runat="server" CausesValidation="True" class="form-control" AutoPostBack="True" placeholder="Date"></asp:TextBox>
-                      <cc1:CalendarExtender ID="txtdoa_CalendarExtender" runat="server" Enabled="True" TargetControlID="txtdoa">
-                      </cc1:CalendarExtender>
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtdoa" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                    </div>
-    <p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="att_id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="205px" Width="542px">
+
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="att_id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="200px" Width="936px">
             <Columns>
                 <asp:BoundField DataField="att_id" HeaderText="ID NO" ReadOnly="True" SortExpression="att_id">
+                <HeaderStyle Height="50px" />
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
                 <asp:BoundField DataField="emp_id" HeaderText="Employee ID" SortExpression="emp_id">

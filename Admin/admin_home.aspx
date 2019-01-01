@@ -23,8 +23,8 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="admin_home.aspx"><img src="images/logo.svg" alt="logo"/></a>&nbsp;
-          <a class="navbar-brand brand-logo-mini" href="admin_home"><img src="images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo" href="admin_home.aspx"><img src="images/Capture1.PNG" alt="logo"/></a>&nbsp;
+          <a class="navbar-brand brand-logo-mini" href="admin_home"><img src="images/Capture1.PNG" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-stretch">
         <div class="search-field d-none d-md-block">
@@ -50,7 +50,7 @@
             </a>
             <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="logout.aspx">
+              <a class="dropdown-item" href="../logout.aspx">
                 <i class="mdi mdi-logout mr-2 text-primary"></i>
                 Signout
               </a>
