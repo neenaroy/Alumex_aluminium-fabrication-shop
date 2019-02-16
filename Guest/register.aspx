@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="Guest_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="register.aspx.cs" Inherits="Guest_register" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-  <title>Alumex Aluminium Fabrication</title>	
+<title>Alumex Aluminium Fabrication</title>	
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -29,10 +29,9 @@
 	
 	<!-- web-fonts -->
 	<link href="//fonts.googleapis.com/css?family=Poiret+One&amp;subset=cyrillic,latin-ext" rel="stylesheet">
-	<!-- //web-fonts -->
-</head>
+	<!-- //web-fonts --></head>
 <body>
- <!-- banner -->
+     <!-- banner -->
 <div class="inner-page-banner" id="home"> 	   
 	<!--Header-->
 	<header>
@@ -70,11 +69,9 @@
 </div>
 <!-- //banner --> 
 
-
-<!-- contact -->
-<section class="contact py-5">
+     <section class="contact py-5">
 	<div class="container">
-		<h2 class="heading text-capitalize mb-sm-5 mb-4">Sign In </h2>
+		<h2 class="heading text-capitalize mb-sm-5 mb-4">Sign Up </h2>
 			<div class="mail_grid_w3l">
       		<form runat="server" >
 					<div class="row">
@@ -88,8 +85,12 @@
                               <asp:TextBox ID="txtpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Password" TextMode="Password"></asp:TextBox>
                               <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtpswd" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
 							</div>
+                            <div class="contact-fields-w3ls">
+                              <asp:TextBox ID="txtrpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtrpswd" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+							</div>
 							<div class="contact-fields-w3ls">
-                             <asp:Button ID="Button1" runat="server" Text="Sign In" class="btn btn-primary btn-send-message" OnClick="Button1_Click" Width="254px"  />&nbsp;&nbsp;<a href="register.aspx"><b><i>New One?</i></b></a>
+                             <asp:Button ID="Button1" runat="server" Text="Sign Up" class="btn btn-primary btn-send-message" OnClick="Button1_Click" Width="254px"  />&nbsp;&nbsp;<a href="login.aspx"><b><i>Already In?</i></b></a>
 							</div>
 						</div>
 					</div>
@@ -97,46 +98,5 @@
 			</div>
 		</div>
 </section>
-   
-<!-- js-scripts -->		
-
-	<!-- js -->
-	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
-	<!-- //js -->
-
-	<!-- start-smoth-scrolling -->
-	<script src="js/SmoothScroll.min.js"></script>
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<script type="text/javascript">
-	    jQuery(document).ready(function ($) {
-	        $(".scroll").click(function (event) {
-	            event.preventDefault();
-	            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
-	        });
-	    });
-	</script>
-	<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-	    $(document).ready(function () {
-	        /*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-
-	        $().UItoTop({ easingType: 'easeOutQuart' });
-
-	    });
-	</script>
-	<!-- //here ends scrolling icon -->
-	<!-- start-smoth-scrolling -->
-	
-<!-- //js-scripts -->  
 </body>
 </html>
-

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="register1.aspx.cs" Inherits="Guest_register1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="contactaddress.aspx.cs" Inherits="Guest_contactaddress" %>
 
 <!DOCTYPE html>
 
@@ -98,33 +98,18 @@
                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ControlToValidate="txtemail" ForeColor="Red"></asp:RequiredFieldValidator>
                                   <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtemail" ErrorMessage="Enter valid email" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                             </div>
-                             <div class="contact-fields-w3ls">
-                                  <asp:TextBox ID="txtphone" runat="server" class="form-control" placeholder="Mobile Number"></asp:TextBox>
-                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*" ControlToValidate="txtphone" ForeColor="Red" ></asp:RequiredFieldValidator>
-                                  <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtphone" ErrorMessage="Enter valid Phone Number" ForeColor="Red" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>
-                            </div>
                             <div class="contact-fields-w3ls">
                                   <asp:TextBox ID="txtlocation" runat="server" class="form-control" placeholder="Location"></asp:TextBox>
                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*" ControlToValidate="txtlocation" ForeColor="Red"></asp:RequiredFieldValidator>
                                   <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="txtlocation" ErrorMessage="Enter valid Place" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
                             </div>
-                            <div class="contact-fields-w3ls">
-                                  <asp:TextBox ID="txtpswd" runat="server" class="form-control" placeholder="Password"></asp:TextBox>
-                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*" ControlToValidate="txtpswd" ForeColor="Maroon"></asp:RequiredFieldValidator>
+                                  <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" Width="197px" class="btn btn-primary btn-send-message" />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="login.aspx"><b><i>Already Sign Up?</i></b></a>
                             </div>
-                            <div class="contact-fields-w3ls">
-                                  <asp:TextBox ID="txtrepswd" runat="server" class="form-control" placeholder="Retype Password"></asp:TextBox>
-                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="*" ControlToValidate="txtrepswd" ForeColor="Red"></asp:RequiredFieldValidator>
-                                  <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password Mismatch" ControlToCompare="txtpswd" ControlToValidate="txtrepswd" ForeColor="Red"></asp:CompareValidator> 
-                                  <br />
-                                  <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" Width="197px" />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="login.aspx"><b><i>Already Sign Up?</i></b></a>
-                            </div>
-                           </div>
-                             <div class="contact-fields-w3ls">  
-                            </div>
-                           </div>  
+                           
+                             </form>
+                           
 				    	</div>
-                     </form>
+                    
                  </div>
 </section>
 <!-- js-scripts -->		

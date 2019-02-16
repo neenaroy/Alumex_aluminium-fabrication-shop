@@ -28,7 +28,7 @@
                                     <asp:Button ID="Button1" runat="server" CommandName="addtocart" OnClick="Button1_Click" Text="Add To Cart" Height="59px" Width="215px" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="Button2" runat="server" CommandName="byenow" OnClick="Button2_Click" Text="Buy Now" Width="216px" Height="57px" />
+                                    <asp:Button ID="Button2" runat="server" CommandName="byenow" OnClick="Button2_Click" Text="Buy Now" Width="225px" Height="58px" />
                                 </td>
                             </tr>
                         </table>

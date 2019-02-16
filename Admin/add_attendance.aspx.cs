@@ -26,6 +26,9 @@ public partial class Admin_add_attendance : System.Web.UI.Page
     }
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
+        string sValue1 = GridView1.SelectedRow.Cells[1].Text;
+        string sValue2 = GridView1.SelectedRow.Cells[2].Text;
+        string sValue3 = GridView1.SelectedRow.Cells[3].Text;
     }
     protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
     {
@@ -33,89 +36,36 @@ public partial class Admin_add_attendance : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        /*foreach (GridViewRow row in GridView1.Rows)
-        {
-
-            Label lblFname = (Label)row.FindControl("lblFname");
-            Label lblFaName = (Label)row.FindControl("lblFaName");
-            Label lblLName = (Label)row.FindControl("lblLName");
-            CheckBox chk_att = (CheckBox)row.FindControl("ddlDesignation");
-
-            dataInsert(lblFname.Text, lblFaName.Text, ddl_att.SelectedValue);
-
-        }*/
-        foreach (GridViewRow row in GridView1.Rows)
-        {
-            CheckBox status = (row.Cells[3].FindControl("CheckBox1") as CheckBox);
-            int rollno = Convert.ToInt32(row.Cells[1].Text);
-         /*   if (status.Checked)
-            {
-                updaterow(emp_id, "true");
-            }
-            else
-            {
-                updaterow(emp_id, "false");
-
-            }*/
+        string sValue1 = GridView1.SelectedRow.Cells[1].Text;
+        string sValue2 = GridView1.SelectedRow.Cells[2].Text;
+        string sValue3 = GridView1.SelectedRow.Cells[3].Text;
+         
+       //If accessing TemplateField column then you can use FindControl method
 
 
-
-        }
-
-     //   Class1 obj = new Class1();
-     //   obj.getconnect();
-    //    SqlCommand cmd1 = new SqlCommand("spattendance", obj.con);
-    //    cmd1.CommandType = CommandType.StoredProcedure;
-   //     cmd1.Parameters.Add("@flag",5);
-    //     cmd1.Parameters.Add("@att_date",txtdoa.Text);
-      //   cmd1.Parameters.Add("@emp_fname", txtfname.Text);
-
-  //cmd1.Parameters.Add("@emp_mobile", txtmobile.Text);
-
- // cmd1.ExecuteNonQuery();
-//  cmd1.Parameters.Add("@att_status",);
-/*  cmd1.Parameters.Add("@emp_lname", txtlname.Text);
-  cmd1.Parameters.Add("@emp_house", txthousename.Text);
-  cmd1.Parameters.Add("@emp_email", txtemail.Text);
-  cmd1.Parameters.Add("@emp_mobile", txtmobile.Text);
-  cmd1.Parameters.Add("@emp_doj", txtdoj.Text);
-  cmd1.Parameters.Add("@emp_loc", txtloc.Text);
-
-  SqlCommand cmd2 = new SqlCommand("spemp", obj.con);
-  cmd2.CommandType = CommandType.StoredProcedure;
-  cmd2.Parameters.Add("@flag", 3);
-  cmd2.Parameters.Add("@emp_mobile", txtmobile.Text);
-  DataTable dt = new DataTable();
-  SqlDataAdapter adt = new SqlDataAdapter(cmd2);
-  adt.Fill(dt);
-  if (dt.Rows.Count > 0)
-    {
-        Response.Write("<script>alert('Employee with same phone number already exist')</script>");
-
-    }
-  else
-    {
-       cmd1.ExecuteNonQuery();
-       obj.closeconnect();
-       Response.Write("<script>alert(' Employee added succesfully')</script>");
-           
-}*/
-    }
-    private void updaterow(int emp_id, String markstatus)
-    {
+     /*  SqlConnection conn = new SqlConnection("<Your database Connection String>");
+       string sql = "INSERT INTO TableName (Column1,Column2,Column3) VALUES (@Val1,@Val2,@Val3)";
+       try
+       {
+	   conn.Open();
+           SqlCommand cmd = new SqlCommand(sql, conn);
+           cmd.Parameters.AddWithValue("@Val1", sValue1);
+           cmd.Parameters.AddWithValue("@Val2", sValue2);
+           cmd.Parameters.AddWithValue("@Val3", sValue3);
+           cmd.CommandType = CommandType.Text;
+           cmd.ExecuteNonQuery();*/
         Class1 obj = new Class1();
         obj.getconnect();
-       // SqlCommand cmd1 = new SqlCommand("spattendance", obj.con);
-      //  String mycon = "Data Source=HP-PC\\SQLEXPRESS; Initial Catalog=StudentAttendance; Integrated Security=True";
+    
         SqlCommand cmd1 = new SqlCommand("spattendance", obj.con);
         cmd1.CommandType = CommandType.StoredProcedure;
-        cmd1.Parameters.Add("@flag", 5);
-     //   String updatedata = "Update attendancedetail set attendancemark='" + markstatus + "' where rollno=" + rollno;
-      //  SqlConnection con = new SqlConnection(mycon);
-     //   con.Open();
-      //  SqlCommand cmd = new SqlCommand();
-      //  cmd.CommandText = updatedata;
-     //   cmd.Connection = con;
+        cmd1.Parameters.Add("@flag", 1);
+        cmd1.Parameters.Add("@att_id",4);
+        cmd1.Parameters.Add("@emp_id", sValue1);
+        cmd1.Parameters.Add("@emp_fname", sValue2);
+        cmd1.Parameters.Add("@emp_mobile", sValue3);
+        cmd1.Parameters.Add("@att_stsus", 4);
+
         cmd1.ExecuteNonQuery();
        // Label2.Text = "Data Has Been Saved Successfully";
     } 

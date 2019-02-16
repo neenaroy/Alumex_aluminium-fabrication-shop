@@ -56,10 +56,10 @@
 							<a class="nav-link" href="View_projects.aspx">Projects</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="view_cart.aspx">My Cart</a>
+							<a class="nav-link" href="my_cart.aspx">My Cart</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="add_orders.aspx">My Orders</a>
+							<a class="nav-link" href="my_order.aspx">My Orders</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="view_bill.aspx">Bill</a>

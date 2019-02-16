@@ -8,12 +8,9 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="att_id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="200px" Width="936px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="emp_id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="200px" Width="936px">
             <Columns>
-                <asp:BoundField DataField="att_id" HeaderText="ID NO" ReadOnly="True" SortExpression="att_id">
-                <HeaderStyle Height="50px" />
-                <ItemStyle HorizontalAlign="Center" />
-                </asp:BoundField>
+               
                 <asp:BoundField DataField="emp_id" HeaderText="Employee ID" SortExpression="emp_id">
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
@@ -41,7 +38,7 @@
         </asp:GridView>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
-        &nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [att_id], [emp_id], [emp_fname], [emp_mobile] FROM [attendance_tb]"></asp:SqlDataSource>
+        &nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT  [emp_id], [emp_fname], [emp_mobile] FROM [emp_tb]"></asp:SqlDataSource>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update attendance" />
     </p>
     <p>

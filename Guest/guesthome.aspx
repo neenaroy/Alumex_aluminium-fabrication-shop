@@ -54,10 +54,10 @@
 							<a class="nav-link" href="View_projects.aspx">Projects</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="view_cart.aspx">My Cart</a>
+							<a class="nav-link" href="my_cart.aspx">My Cart</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="add_orders.aspx">My Orders</a>
+							<a class="nav-link" href="my_order.aspx">My Orders</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="view_bill.aspx">Bill</a>
@@ -88,11 +88,10 @@
 </div>
 <!-- //banner --> 
 
-     <section class="contact py-5">
+      <section class="contact py-5">
 	<div class="container">
-		<h2 class="heading text-capitalize mb-sm-5 mb-4">Our Sevices</h2>
+		<h2 class="heading text-capitalize mb-sm-5 mb-4">Select Your Favourite...</h2>
 			<div class="mail_grid_w3l">
-                <form runat="server">
                	<div class="row">
 						<div class="col-md-6 contact_left_grid" data-aos="fade-right">
                             <asp:DataList ID="DataList1" runat="server" DataKeyField="cat_id" DataSourceID="SqlDataSource1" RepeatColumns="4">
@@ -132,20 +131,17 @@
                                             <td>&nbsp;</td>
                                         </tr>
                                     </table>
-                                    <asp:Button ID="Button1" runat="server" CommandName="View More"  Text="View More" />
-<br />
+                                        <a href="view_model.aspx?id=<%# Eval("cat_id") %>">View More</a><br />
                                     <br />
                                 </ItemTemplate>
                             </asp:DataList>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [cat_name], [cat_description], [cat_image], [cat_id] FROM [category_tb]"></asp:SqlDataSource>
-                     </form>    </div>
                </div>  
 			</div>
      
 		</div>
          
 </section>
-
 
 <!-- footer -->
 <footer class="py-5">

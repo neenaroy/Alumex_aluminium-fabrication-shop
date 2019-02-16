@@ -264,43 +264,59 @@
 <!--// Clients -->
 
 <!-- latest news -->
-  <section class="contact py-5">
+   <section class="contact py-5">
 	<div class="container">
-		<h2 class="heading text-capitalize mb-sm-5 mb-4">Projects Done</h2>
+		<h2 class="heading text-capitalize mb-sm-5 mb-4">Select Your Favourite...</h2>
 			<div class="mail_grid_w3l">
-            	<div class="row">
+               	<div class="row">
 						<div class="col-md-6 contact_left_grid" data-aos="fade-right">
-                            <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="4">
+                            <asp:DataList ID="DataList1" runat="server" DataKeyField="cat_id" DataSourceID="SqlDataSource1" RepeatColumns="4">
                                 <ItemTemplate>
-                                    <br />
                                     <table class="w-100">
                                         <tr>
                                             <td>
-                                                <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl='<%# Eval("project_image") %>' Width="300px" />
+                                                <asp:Label ID="cat_nameLabel0" runat="server" Font-Bold="True" ForeColor="Black" Text='<%# Eval("cat_name") %>' />
                                             </td>
-                                            <td>&nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td>&nbsp;</td>
                                             <td>&nbsp;</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <asp:Button ID="Button1" runat="server" CommandName="Are You Intrested?" Height="58px" OnClick="Button1_Click" Text="Are You Intrested?" Width="295px" />
+                                                &nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Image ID="Image1" runat="server" Height="200px" Width="300px" ImageUrl='<%# Eval("cat_image") %>' />
                                             </td>
                                             <td>&nbsp;</td>
                                         </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="cat_descriptionLabel" runat="server" ForeColor="Black" Text='<%# Eval("cat_description") %>' Font-Bold="True" />
+                                            </td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
                                     </table>
+                                        <a href="view_product.aspx?id=<%# Eval("cat_id") %>">View More</a><br />
                                     <br />
                                 </ItemTemplate>
                             </asp:DataList>
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [project_image] FROM [project_tb]"></asp:SqlDataSource>
-                         </div>
-                    </div>
-                </div>
-        </div>
-</section><!-- //latest news -->
-
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [cat_name], [cat_description], [cat_image], [cat_id] FROM [category_tb]"></asp:SqlDataSource>
+               </div>  
+			</div>
+     
+		</div>
+   
 <!-- footer -->
 <footer class="py-5">
 	<div class="container py-md-5">

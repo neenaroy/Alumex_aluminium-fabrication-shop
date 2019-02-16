@@ -10,12 +10,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-
-public partial class Guest_register1 : System.Web.UI.Page
+public partial class Guest_register : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+
     }
     protected int get_id()
     {
@@ -44,27 +43,22 @@ public partial class Guest_register1 : System.Web.UI.Page
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@flag", 0);
             cmd.Parameters.Add("@loginid", get_id());
-            cmd.Parameters.Add("@mobile", txtphone.Text);
+            cmd.Parameters.Add("@mobile", txtmobile.Text);
             cmd.Parameters.Add("@password", txtpswd.Text);
             cmd.Parameters.Add("@usertype", "user");
 
-            SqlCommand cmd1 = new SqlCommand("spregister", obj.con);
+            SqlCommand cmd1 = new SqlCommand("spreg", obj.con);
             cmd1.CommandType = CommandType.StoredProcedure;
             cmd1.Parameters.Add("@flag", 0);
-            cmd1.Parameters.Add("@reg_id", get_id());
-            cmd1.Parameters.Add("@fname", txtfname.Text);
-            cmd1.Parameters.Add("@lname", txtlname.Text);
-            cmd1.Parameters.Add("@house", txthouse.Text);
-            cmd1.Parameters.Add("@email", txtemail.Text);
-            cmd1.Parameters.Add("@mobile", txtphone.Text);
-            cmd1.Parameters.Add("@location", txtlocation.Text);
+            cmd1.Parameters.Add("@regi_id", get_id());
+            cmd1.Parameters.Add("@mobile", txtmobile.Text);
             cmd1.Parameters.Add("@password", txtpswd.Text);
 
 
-            SqlCommand cmd2 = new SqlCommand("spregister", obj.con);
+            SqlCommand cmd2 = new SqlCommand("spreg", obj.con);
             cmd2.CommandType = CommandType.StoredProcedure;
             cmd2.Parameters.Add("@flag", 3);
-            cmd2.Parameters.Add("@mobile", txtphone.Text);
+            cmd2.Parameters.Add("@mobile", txtmobile.Text);
             DataTable dt = new DataTable();
             SqlDataAdapter adt = new SqlDataAdapter(cmd2);
             adt.Fill(dt);
@@ -78,18 +72,15 @@ public partial class Guest_register1 : System.Web.UI.Page
                 cmd.ExecuteNonQuery();
                 cmd1.ExecuteNonQuery();
                 Response.Write("<script>alert('Registerd succesfully')</script>");
+                Response.Redirect("login.aspx");
                 clear();
             }
     }
     protected void clear()
     {
-        txtfname.Text = "";
-        txtlname.Text = "";
-        txthouse.Text = "";
-        txtemail.Text = "";
-        txtphone.Text = "";
-        txtlocation.Text = "";
+       
+        txtmobile.Text = "";
         txtpswd.Text = "";
-        txtrepswd.Text = "";
+        txtrpswd.Text = "";
     }
 }
