@@ -88,6 +88,7 @@
                             <div class="contact-fields-w3ls">
                               <asp:TextBox ID="txtrpswd" runat="server" CausesValidation="True" class="form-control" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
                               <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtrpswd" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password mismatch" ControlToCompare="txtpswd" ControlToValidate="txtrpswd" ForeColor="Red"></asp:CompareValidator>
 							</div>
 							<div class="contact-fields-w3ls">
                              <asp:Button ID="Button1" runat="server" Text="Sign Up" class="btn btn-primary btn-send-message" OnClick="Button1_Click" Width="254px"  />&nbsp;&nbsp;<a href="login.aspx"><b><i>Already In?</i></b></a>

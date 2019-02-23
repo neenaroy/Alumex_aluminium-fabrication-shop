@@ -123,12 +123,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="view_approved_customer.aspx">
               <span class="menu-title">Customer</span>
             </a>
           </li>
              <li class="nav-item">
-            <a class="nav-link" href="admin_view_orders.aspx">
+            <a class="nav-link" href="view_order_customer.aspx">
               <span class="menu-title">Orders</span>
             </a>
           </li>

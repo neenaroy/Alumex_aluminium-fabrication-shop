@@ -63,14 +63,14 @@ public partial class Admin_add_employee : System.Web.UI.Page
         cmd1.Parameters.Add("@emp_doj", txtdoj.Text);
         cmd1.Parameters.Add("@emp_loc", txtloc.Text);
 
-        obj.getconnect();
+       /* obj.getconnect();
         SqlCommand cmd = new SqlCommand("spattendance", obj.con);
         cmd.CommandType = CommandType.StoredProcedure;
         cmd.Parameters.Add("@flag", 0);
         //cmd.Parameters.Add("@att_id", get_id());
         cmd.Parameters.Add("@emp_id", get_id());
         cmd.Parameters.Add("@emp_fname", txtfname.Text);
-        cmd.Parameters.Add("@emp_mobile", txtmobile.Text);
+        cmd.Parameters.Add("@emp_mobile", txtmobile.Text);*/
 
         SqlCommand cmd2 = new SqlCommand("spemp", obj.con);
         cmd2.CommandType = CommandType.StoredProcedure;
@@ -87,7 +87,7 @@ public partial class Admin_add_employee : System.Web.UI.Page
         else
           {
              cmd1.ExecuteNonQuery();
-             cmd.ExecuteNonQuery();
+            // cmd.ExecuteNonQuery();
              obj.closeconnect();
              Response.Write("<script>alert(' Employee added succesfully')</script>");
             clear();

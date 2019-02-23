@@ -8867,6 +8867,8 @@ html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+    width: 200px;
+    height: 28px;
 }
 
 button::-moz-focus-inner,

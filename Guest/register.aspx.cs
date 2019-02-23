@@ -57,7 +57,7 @@ public partial class Guest_register : System.Web.UI.Page
 
             SqlCommand cmd2 = new SqlCommand("spreg", obj.con);
             cmd2.CommandType = CommandType.StoredProcedure;
-            cmd2.Parameters.Add("@flag", 3);
+            cmd2.Parameters.Add("@flag", 2);
             cmd2.Parameters.Add("@mobile", txtmobile.Text);
             DataTable dt = new DataTable();
             SqlDataAdapter adt = new SqlDataAdapter(cmd2);

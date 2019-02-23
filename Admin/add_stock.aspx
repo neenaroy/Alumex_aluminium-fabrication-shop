@@ -45,8 +45,6 @@
                     </div>
                     <div class="form-group">
                         <asp:TextBox ID="txtinvoicedate" runat="server" class="form-control" placeholder="Date of Invoice"></asp:TextBox>
-                        <cc1:CalendarExtender ID="txtinvoicedate_CalendarExtender" runat="server" Enabled="True" TargetControlID="txtinvoicedate">
-                        </cc1:CalendarExtender>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtinvoicedate" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                    <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-gradient-primary mr-2" OnClick="Button1_Click" />

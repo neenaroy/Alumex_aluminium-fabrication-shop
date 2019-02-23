@@ -30,7 +30,7 @@ public partial class Admin_add_shop : System.Web.UI.Page
         int a = 0;
         Class1 obj = new Class1();
         obj.getconnect();
-        SqlCommand cmd = new SqlCommand("spemp", obj.con);
+        SqlCommand cmd = new SqlCommand("spshop", obj.con);
         cmd.CommandType = CommandType.StoredProcedure;
         cmd.Parameters.Add("@flag", 1);
         DataTable dt = new DataTable();
