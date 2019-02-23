@@ -51,10 +51,8 @@ public partial class Admin_add_attendance : System.Web.UI.Page
     
         SqlCommand cmd1 = new SqlCommand("spattendance", obj.con);
         cmd1.CommandType = CommandType.StoredProcedure;
-        cmd1.Parameters.Add("@flag", 0);
-        cmd1.Parameters.Add("@att_id",4);
-        cmd1.Parameters.Add("@emp_id", 6);
-        cmd1.Parameters.Add("@att_status", 4);
+        cmd1.Parameters.Add("@Emp_idlist", joined);
+        
 
         cmd1.ExecuteNonQuery();
     } 

@@ -19,4 +19,8 @@ public partial class Admin_add_bill : System.Web.UI.Page
             Response.Redirect("~/Guest/login.aspx");
         }
     }
+    protected void ddlitem_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        GridView1.Visible = true;
+    }
 }

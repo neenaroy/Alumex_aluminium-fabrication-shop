@@ -16,7 +16,10 @@
             <br />
         </ItemTemplate>
     </asp:DataList>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT booking_tb.book_id, booking_tb.mobile, booking_tb.model_id,booking_tb.status, model_tb.model_id AS Expr1, model_tb.item_code,item_tb.item_code, item_tb.item_name, model_tb.model_image FROM booking_tb INNER JOIN model_tb ON booking_tb.model_id = model_tb.model_id CROSS JOIN item_tb where  booking_tb.model_id=model_tb.model_id and  model_tb.item_code=item_tb.item_code and booking_tb.status=1 and booking_tb.mobile=mobile"></asp:SqlDataSource>
-    
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT booking_tb.book_id, booking_tb.mobile, booking_tb.model_id,booking_tb.status, model_tb.model_id AS Expr1, model_tb.item_code,item_tb.item_code, item_tb.item_name, model_tb.model_image FROM booking_tb INNER JOIN model_tb ON booking_tb.model_id = model_tb.model_id CROSS JOIN item_tb where  booking_tb.model_id=model_tb.model_id and  model_tb.item_code=item_tb.item_code and ([mobile] = @mobile) AND ([status] = @status)"></asp:SqlDataSource>
+    <SelectParameters>
+            <asp:SessionParameter Name="mobile" SessionField="username" Type="Decimal" />
+            <asp:Parameter DefaultValue="1" Name="status" Type="Int32" />
+        </SelectParameters>
 </asp:Content>
 
