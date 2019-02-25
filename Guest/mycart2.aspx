@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Guest/guest.master" AutoEventWireup="true" CodeFile="my_cart.aspx.cs" Inherits="Guest_my_cart" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Guest/guest.master" AutoEventWireup="true" CodeFile="mycart2.aspx.cs" Inherits="Guest_mycart2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -21,7 +21,9 @@
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href='mycart2.aspx?id=<%# Eval("model_id") %>'>View More</a><br />
+            <asp:Button ID="Button1" runat="server" CommandName="buynow" OnClick="Button1_Click" Text="Buy Now" />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
         </ItemTemplate>
     </asp:DataList>

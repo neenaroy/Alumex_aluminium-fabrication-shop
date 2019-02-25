@@ -44,4 +44,7 @@ public partial class Guest_my_cart : System.Web.UI.Page
         Response.Redirect("user_purchase.aspx");
         Response.Write("<script>alert('Order placed sucessfully')</script>");
     }
+    
+   
+       
 }
