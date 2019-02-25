@@ -307,7 +307,7 @@
                                             <td>&nbsp;</td>
                                         </tr>
                                     </table>
-                                        <a href="view_product.aspx?id=<%# Eval("cat_id") %>">View More</a><br />
+                                        <a href="login.aspx">View More</a><br />
                                     <br />
                                 </ItemTemplate>
                             </asp:DataList>

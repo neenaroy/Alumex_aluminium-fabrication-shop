@@ -4,6 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class Admin_add_bill : System.Web.UI.Page
 {
@@ -21,6 +26,32 @@ public partial class Admin_add_bill : System.Web.UI.Page
     }
     protected void ddlitem_SelectedIndexChanged(object sender, EventArgs e)
     {
-        GridView1.Visible = true;
+        
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Class1 obj = new Class1();
+        obj.getconnect();
+        SqlCommand cmd1 = new SqlCommand("spbill", obj.con);
+        cmd1.CommandType = CommandType.StoredProcedure;
+        cmd1.Parameters.Add("@flag", 0);
+        cmd1.Parameters.Add("@bill_no", txtbill_no.Text);
+        cmd1.Parameters.Add("@username", DropDownList1.SelectedItem.Text);
+        cmd1.Parameters.Add("@squarefeet", txtsquare.Text);
+        cmd1.Parameters.Add("@amount",txtamount.Text);
+        cmd1.Parameters.Add("@category", DropDownList2.SelectedItem.Text);
+        cmd1.Parameters.Add("@item_code", ddlitem.SelectedItem.Text);
+        
+        cmd1.ExecuteNonQuery();
+        obj.closeconnect();
+        Response.Write("<script>alert(' Bill added succesfully')</script>");
+        clear();
+    }
+    protected void clear()
+    {
+        txtbill_no.Text = "";
+        txtsquare.Text = "";
+        txtamount.Text = "";
+       
     }
 }

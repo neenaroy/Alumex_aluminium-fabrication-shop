@@ -18,6 +18,10 @@
               <a class="dropdown-item" href="view_projects_done.aspx">
                 View Projects
               </a>
+                <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="search_projects.aspx">
+                Search Projects
+              </a>
             </div>
           </li>
         </ul>

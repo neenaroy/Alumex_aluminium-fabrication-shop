@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
-     <ul class="navbar-nav navbar-nav-right">
+    <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                  <div class="nav-profile-text">
@@ -17,6 +17,10 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="view_item.aspx">
                View Item
+              </a>
+                <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Search_item.aspx">
+               Search Item
               </a>
             </div>
           </li>

@@ -48,7 +48,11 @@
               </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="view_shop.aspx">
-               Update
+               Update Shops
+              </a>
+                <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="search_shop.aspx">
+              Search Shops
               </a>
             </div>
           </li>

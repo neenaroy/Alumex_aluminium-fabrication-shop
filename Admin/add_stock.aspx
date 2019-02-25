@@ -67,13 +67,10 @@
                 Add Stock
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="add_sell.aspx">
+              <a class="dropdown-item" href="view_stock.aspx">
                In_stock
               </a>
-                 <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="add_sell.aspx">
-               Out_stock
-              </a>
+                
                  <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="search_stock.aspx">
                Search Stock

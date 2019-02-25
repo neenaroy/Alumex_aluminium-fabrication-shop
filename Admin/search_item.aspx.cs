@@ -19,4 +19,8 @@ public partial class Admin_search_item : System.Web.UI.Page
             Response.Redirect("~/Guest/login.aspx");
         }
     }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        GridView1.Visible = true;
+    }
 }

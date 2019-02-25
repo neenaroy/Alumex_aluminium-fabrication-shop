@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.master" AutoEventWireup="true" CodeFile="search_item.aspx.cs" Inherits="Admin_search_item" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.master" AutoEventWireup="true" CodeFile="search_projects.aspx.cs" Inherits="Admin_search_projects" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -7,20 +7,20 @@
           <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                  <div class="nav-profile-text">
-                      <p class="mb-1 text-black">Item</p>
+                      <p class="mb-1 text-black">Projects Done</p>
                   </div>
               </a>
             <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="add_item.aspx">
-                Add Item
+              <a class="dropdown-item" href="add_projects_done.aspx">
+                Add Projects
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="view_item.aspx">
-               View Item
+              <a class="dropdown-item" href="view_projects_done.aspx">
+                View Projects
               </a>
                 <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="Search_item.aspx">
-               Search Item
+              <a class="dropdown-item" href="search_projects.aspx">
+                Search Projects
               </a>
             </div>
           </li>
@@ -29,8 +29,8 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="form-group">
            <label for="exampleInputUsername1">Select Item</label>
-            <asp:DropDownList ID="DropDownList1"  class="form-control form-control-sm" runat="server" DataSourceID="SqlDataSource1" DataTextField="item_code" DataValueField="item_code"></asp:DropDownList>
-             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT DISTINCT [item_code] FROM [item_tb]"></asp:SqlDataSource>
+            <asp:DropDownList ID="DropDownList1"  class="form-control form-control-sm" runat="server" DataSourceID="SqlDataSource1" DataTextField="project_id" DataValueField="project_id"></asp:DropDownList>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT DISTINCT [project_id] FROM [project_tb]"></asp:SqlDataSource>
              <br />
           </div>
       <div class="form-group">
@@ -38,10 +38,10 @@
             <br />
     </div>
           <div class="form-group">
-     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="item_id" DataSourceID="SqlDataSource2" Visible="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Height="113px" Width="894px">
+     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="project_id" DataSourceID="SqlDataSource2" Visible="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Height="113px" Width="894px">
         <Columns>
-            <asp:BoundField DataField="item_name" HeaderText="item_name" SortExpression="item_name" />
-            <asp:BoundField DataField="item_code" HeaderText="item_code" SortExpression="item_code" />
+            <asp:BoundField DataField="project_id" HeaderText="Project Id" SortExpression="project_id" ReadOnly="True" />
+            <asp:BoundField DataField="cat_name" HeaderText="Name" SortExpression="cat_name" />
         </Columns>
          <FooterStyle BackColor="#CCCCCC" />
          <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -53,9 +53,9 @@
          <SortedDescendingCellStyle BackColor="#CAC9C9" />
          <SortedDescendingHeaderStyle BackColor="#383838" />
     </asp:GridView>
-              <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT * FROM [item_tb] WHERE ([item_code] = @item_code)">
+              <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:alumexConnectionString %>" SelectCommand="SELECT [project_id], [cat_name] FROM [project_tb] WHERE ([project_id] = @project_id)">
                   <SelectParameters>
-                      <asp:ControlParameter ControlID="DropDownList1" Name="item_code" PropertyName="SelectedValue" Type="Int32" />
+                      <asp:ControlParameter ControlID="DropDownList1" Name="project_id" PropertyName="SelectedValue" Type="Int32" />
                   </SelectParameters>
               </asp:SqlDataSource>
         </div>

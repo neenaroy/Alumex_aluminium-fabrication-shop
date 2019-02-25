@@ -14,7 +14,7 @@ public partial class Admin_add_attendance : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       /* HttpContext.Current.Response.Cache.SetExpires(DateTime.UtcNow.AddDays(-1));
+       HttpContext.Current.Response.Cache.SetExpires(DateTime.UtcNow.AddDays(-1));
         HttpContext.Current.Response.Cache.SetValidUntilExpires(false);
         HttpContext.Current.Response.Cache.SetRevalidation(HttpCacheRevalidation.AllCaches);
         HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
@@ -22,7 +22,7 @@ public partial class Admin_add_attendance : System.Web.UI.Page
         if (Session["username"].ToString() == "")
         {
             Response.Redirect("~/Guest/login.aspx");
-        }*/
+        }
     }
     protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
     {
@@ -47,13 +47,16 @@ public partial class Admin_add_attendance : System.Web.UI.Page
         }
         string joined = string.Join(",", idList);
         Class1 obj = new Class1();
-        obj.getconnect();
-    
+        obj.getconnect();  
         SqlCommand cmd1 = new SqlCommand("spattendance", obj.con);
         cmd1.CommandType = CommandType.StoredProcedure;
         cmd1.Parameters.Add("@Emp_idlist", joined);
-        
-
         cmd1.ExecuteNonQuery();
-    } 
+        Response.Write("<script>alert(' attendence added succesfully')</script>");
+
+    }
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

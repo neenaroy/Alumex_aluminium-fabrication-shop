@@ -15,13 +15,10 @@
                 Add Stock
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="add_sell.aspx">
+              <a class="dropdown-item" href="view_stock.aspx">
                In_stock
               </a>
-                 <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="add_sell.aspx">
-               Out_stock
-              </a>
+                
                  <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="search_stock.aspx">
                Search Stock
@@ -40,6 +37,8 @@
         <br />
         </div>
     <div>
+</div>
+    <div class="form-group">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="stock_id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="179px" Width="950px" Visible="False">
             <Columns>
                 <asp:BoundField DataField="stock_id" HeaderText="Stock ID" ReadOnly="True" SortExpression="stock_id">

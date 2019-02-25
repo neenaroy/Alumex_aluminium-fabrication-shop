@@ -18,6 +18,10 @@
               <a class="dropdown-item" href="view_model.aspx">
                View Model
               </a>
+                <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="search_model.aspx">
+               Search Model
+              </a>
             </div>
           </li>
         </ul>

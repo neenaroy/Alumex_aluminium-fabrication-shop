@@ -5,8 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="176px" Width="865px">
-        <AlternatingRowStyle BackColor="#CCCCCC" />
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" ForeColor="Black" Height="176px" Width="865px" CellSpacing="2">
         <Columns>
             <asp:BoundField DataField="book_id" HeaderText="Booking Id" InsertVisible="False" ReadOnly="True" SortExpression="book_id" >
             <HeaderStyle Height="1px" />
@@ -18,7 +17,8 @@
         </Columns>
         <FooterStyle BackColor="#CCCCCC" />
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+        <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+        <RowStyle BackColor="White" />
         <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
         <SortedAscendingCellStyle BackColor="#F1F1F1" />
         <SortedAscendingHeaderStyle BackColor="#808080" />
